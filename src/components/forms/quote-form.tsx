@@ -23,6 +23,7 @@ const schema = z.object({
   preferredContact: z.string().optional(),
   message: z.string().max(4000).optional(),
   emailOptIn: z.boolean().optional(),
+  website: z.string().optional(), // honeypot — bots fill, humans never see
 });
 
 type Values = z.infer<typeof schema>;
@@ -134,8 +135,13 @@ export function QuoteForm({ source = "contact" }: { source?: string }) {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="rounded-3xl border border-ink/10 bg-cream p-6 shadow-[var(--shadow-card)] sm:p-10"
+      className="relative rounded-3xl border border-ink/10 bg-cream p-6 shadow-[var(--shadow-card)] sm:p-10"
     >
+      {/* Honeypot — hidden from humans, bots fill it */}
+      <div className="absolute -left-[9999px] top-0" aria-hidden="true">
+        <input type="text" tabIndex={-1} autoComplete="off" {...register("website")} />
+      </div>
+
       {/* Progress */}
       <div className="mb-8">
         <div className="flex items-center justify-between text-[11px] font-semibold uppercase tracking-[0.14em] text-ink/50">
