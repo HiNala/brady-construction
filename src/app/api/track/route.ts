@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { createHash, randomUUID } from "node:crypto";
 import { db } from "@/lib/db";
 import { events, sessions, visitors } from "@/lib/db/schema";
+import { rateLimit } from "@/lib/rate-limit";
 
 
 function hashIp(req: NextRequest): string | null {
@@ -43,6 +44,14 @@ const ALLOWED = new Set([
 ]);
 
 export async function POST(req: NextRequest) {
+  const ip =
+    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
+    req.headers.get("x-real-ip") ??
+    "anon";
+  if (!rateLimit(`track:${ip}`, 120, 60_000)) {
+    return new NextResponse(null, { status: 204 });
+  }
+
   let body: {
     event?: string; path?: string; referrer?: string;
     utm?: Record<string, string>; props?: Record<string, unknown>;
