@@ -107,9 +107,17 @@ export function Header() {
                   className="relative"
                   onMouseEnter={() => setSvcOpen(true)}
                   onMouseLeave={() => setSvcOpen(false)}
+                  onFocus={() => setSvcOpen(true)}
+                  onBlur={(e) => {
+                    if (!e.currentTarget.contains(e.relatedTarget as Node)) setSvcOpen(false);
+                  }}
+                  onKeyDown={(e) => e.key === "Escape" && setSvcOpen(false)}
                 >
                   <Link
                     href="/services"
+                    aria-haspopup="true"
+                    aria-expanded={svcOpen}
+                    aria-current={pathname.startsWith("/services") ? "page" : undefined}
                     className={cn(
                       "link-sweep text-[13.5px] font-medium tracking-wide",
                       onDark ? "text-bone/85 hover:text-bone" : "text-ink/75 hover:text-ink",
@@ -151,6 +159,7 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
+                  aria-current={pathname === item.href ? "page" : undefined}
                   className={cn(
                     "link-sweep text-[13.5px] font-medium tracking-wide",
                     onDark ? "text-bone/85 hover:text-bone" : "text-ink/75 hover:text-ink",
