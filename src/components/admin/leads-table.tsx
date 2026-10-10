@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { Fragment, useMemo, useState } from "react";
 import { ChevronDown, Mail, Inbox } from "lucide-react";
 import { cn, formatDateTime } from "@/lib/utils";
 
@@ -110,9 +110,8 @@ export function LeadsTable({ leads: initial }: { leads: LeadRow[] }) {
             </thead>
             <tbody className="divide-y divide-bone/8">
               {filtered.map((l) => (
-                <>
+                <Fragment key={l.id}>
                   <tr
-                    key={l.id}
                     onClick={() => {
                       setExpanded(expanded === l.id ? null : l.id);
                       setNotes((n) => ({ ...n, [l.id]: l.notes ?? "" }));
@@ -162,7 +161,7 @@ export function LeadsTable({ leads: initial }: { leads: LeadRow[] }) {
                     </td>
                   </tr>
                   {expanded === l.id && (
-                    <tr key={`${l.id}-detail`} className="bg-[#191511]">
+                    <tr className="bg-[#191511]">
                       <td colSpan={6} className="px-5 py-5">
                         <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
                           <div>
@@ -205,7 +204,7 @@ export function LeadsTable({ leads: initial }: { leads: LeadRow[] }) {
                       </td>
                     </tr>
                   )}
-                </>
+                </Fragment>
               ))}
             </tbody>
           </table>
