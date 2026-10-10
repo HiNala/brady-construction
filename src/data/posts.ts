@@ -289,8 +289,8 @@ Basement additions typically run **$400–$900+ per square foot** all-in, depend
     title: "ADU vs. Home Addition in Wine Country: Which Builds More Value?",
     excerpt:
       "Sonoma and Napa homeowners face a real choice: attached addition or detached ADU? The costs, rules, rental math and lifestyle trade-offs.",
-    coverImage: "/images/hero/exterior-064.webp",
-    coverAlt: "Wine Country home exterior with covered porch and timber columns",
+    coverImage: "/images/gallery/exterior-039.webp",
+    coverAlt: "Two-story home with attached garage beneath mature oak trees",
     category: "Planning",
     tags: ["adu", "additions", "wine country"],
     keywords: ["adu vs addition", "adu builder sonoma county", "guest house cost", "adu cost napa"],
@@ -337,8 +337,8 @@ Build the **addition** when the goal is how you live every day. Build the **ADU*
     title: "How to Choose a General Contractor in the Bay Area (Without Getting Burned)",
     excerpt:
       "The license check, the bid red flags, the questions that reveal everything — a 46-year contractor's guide to hiring a contractor.",
-    coverImage: "/images/gallery/people-005.webp",
-    coverAlt: "Contractor reviewing plans at a home's front door",
+    coverImage: "/images/gallery/people-062.webp",
+    coverAlt: "Contractor standing at a front door holding rolled plans",
     category: "Planning",
     tags: ["hiring", "contractors", "planning"],
     keywords: ["how to choose a general contractor", "licensed contractor california", "contractor red flags", "check contractor license"],

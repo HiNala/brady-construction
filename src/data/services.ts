@@ -89,8 +89,8 @@ export const SERVICES: Service[] = [
       "Foundation, framing, roofing — full scope in-house",
       "Architect & owner-builder collaboration welcomed",
     ],
-    image: "/images/hero/exterior-051.webp",
-    imageAlt: "Home addition under construction showing new framing and roofline",
+    image: "/images/gallery/addition-034.webp",
+    imageAlt: "Second-story home addition being framed on an existing roofline",
     keywords: [
       "home addition contractor",
       "room addition",
@@ -185,8 +185,8 @@ export const SERVICES: Service[] = [
       "Patios, terraces & outdoor living spaces",
       "Structural concrete and flatwork",
     ],
-    image: "/images/gallery/concrete-049.webp",
-    imageAlt: "Freshly poured concrete steps beside a retaining wall",
+    image: "/images/gallery/concrete-063.webp",
+    imageAlt: "Terraced concrete steps and retaining wall built into a hillside",
     keywords: [
       "concrete contractor",
       "concrete driveway",
@@ -213,8 +213,8 @@ export const SERVICES: Service[] = [
       "Historic renovation and restoration",
       "Investor joint ventures & distressed property",
     ],
-    image: "/images/hero/exterior-064.webp",
-    imageAlt: "Custom estate exterior with covered porch and timber columns",
+    image: "/images/gallery/exterior-054.webp",
+    imageAlt: "Custom-built home exterior with cupola, bay windows and pool terrace",
     keywords: [
       "custom home builder",
       "historic home restoration",

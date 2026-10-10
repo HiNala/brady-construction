@@ -57,7 +57,7 @@ export const PROJECT_SPOTLIGHTS = [
     year: "1990",
     description:
       "Historic-style barn, carriage house and 7-car garage with a game room above — one of three buildings designed and built around a centered pool: the main house, guest house, and Patrick's favorite, the barn.",
-    image: "/images/hero/exterior-007.webp",
+    image: "/images/gallery/exterior-004.webp",
     tag: "Estate Build",
   },
   {
@@ -65,7 +65,7 @@ export const PROJECT_SPOTLIGHTS = [
     location: "Sonoma, CA",
     description:
       "A little country classic designed and built by Patrick — light, open living in the heart of Wine Country. See it at 18337 1st Avenue and 125 Fetters Avenue, Sonoma.",
-    image: "/images/hero/exterior-064.webp",
+    image: "/images/hero/interior-067.webp",
     tag: "Custom Home",
   },
   {
