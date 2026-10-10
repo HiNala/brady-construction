@@ -1,5 +1,5 @@
 /**
- * Seed the database: push schema + insert the 10 starter articles.
+ * Seed the database: push schema + insert the starter articles.
  * Usage: node scripts/seed.mjs   (tsx not required — uses drizzle-kit push first)
  */
 import { execSync } from "node:child_process";

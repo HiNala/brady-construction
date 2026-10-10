@@ -107,9 +107,9 @@ export default function AboutPage() {
           <Stats
             items={[
               { value: SITE.yearsInBusiness, suffix: "+", label: "Years in business" },
-              { value: 500, suffix: "+", label: "Projects completed" },
+              { value: 8, label: "Service lines" },
               { value: 6, label: "County regions" },
-              { value: 4, suffix: "", label: "Decades licensed" },
+              { value: 4, suffix: "", label: "Decades of building" },
             ]}
           />
         </Container>
@@ -133,7 +133,7 @@ export default function AboutPage() {
               {
                 icon: Landmark,
                 t: "Licensed & honest",
-                d: `California License #${SITE.license} since ${SITE.founded}. Straight numbers, real schedules, no games.`,
+                d: `California License #${SITE.license}. Straight numbers, real schedules, no games.`,
               },
             ].map((v, i) => (
               <Reveal key={v.t} delay={i * 0.07}>
@@ -184,7 +184,7 @@ export default function AboutPage() {
               <ShieldCheck className="mt-1 h-8 w-8 text-brass-deep" />
               <div>
                 <h2 className="display text-2xl font-medium sm:text-3xl">
-                  Licensed since {SITE.founded} — verify us
+                  Licensed California contractor — verify us
                 </h2>
                 <p className="mt-2 max-w-xl text-[14.5px] leading-relaxed text-ink/60">
                   California Contractor License #{SITE.license}. Every legitimate

@@ -19,7 +19,7 @@ services:
       timeout: 3s
       retries: 10
 
-  # One-shot: seed the 10 starter articles (tables come from db/init.sql).
+  # One-shot: seed the starter articles (tables come from db/init.sql).
   # Safe to ignore — the site falls back to built-in articles if this fails.
   seed:
     image: node:22-alpine

@@ -186,7 +186,7 @@ export default function HomePage() {
           <Stats
             items={[
               { value: SITE.yearsInBusiness, suffix: "+", label: "Years in business" },
-              { value: 500, suffix: "+", label: "Projects completed" },
+              { value: 8, label: "Service lines" },
               { value: 6, label: "County regions served" },
               { value: 100, suffix: "%", label: "Family owned & operated" },
             ]}
@@ -337,7 +337,7 @@ export default function HomePage() {
                     { icon: Landmark, t: "Simpson Strong-Tie & welded moment frames", d: "Walls come out safely — engineered, permitted, inspected." },
                     { icon: ShieldCheck, t: "Seismic retrofitting & foundations", d: "Bolting, shear walls, corrective and hillside foundation work." },
                     { icon: Users, t: "Owner-builder & contractor friendly", d: "We do the rough stuff — you enjoy the finish." },
-                    { icon: Award, t: "Licensed since 1980", d: `California Contractor License #${SITE.license}.` },
+                    { icon: Award, t: "Licensed CA contractor", d: `California Contractor License #${SITE.license}.` },
                   ].map((f) => (
                     <li key={f.t} className="flex gap-4">
                       <span className="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brass/15 text-brass-deep">
