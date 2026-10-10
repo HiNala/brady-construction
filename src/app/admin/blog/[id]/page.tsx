@@ -4,6 +4,7 @@ import { eq } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { posts } from "@/lib/db/schema";
 import { SEED_POSTS } from "@/data/posts";
+import { requireAdmin } from "@/lib/auth";
 import { PostEditor, type EditablePost } from "@/components/admin/post-editor";
 
 // Admin is fully dynamic — opt out of instant-navigation validation
@@ -14,6 +15,7 @@ export default async function EditPostPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
+  await requireAdmin();
   await connection();
   const { id } = await params;
   const numId = Number(id);

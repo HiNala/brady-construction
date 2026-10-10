@@ -3,6 +3,7 @@ import { db } from "@/lib/db";
 import Link from "next/link";
 import { ArrowRight, Inbox, Users, Eye, MousePointerClick, TrendingUp, Share2 } from "lucide-react";
 import { connection } from "next/server";
+import { requireAdmin } from "@/lib/auth";
 import { DailyChart } from "@/components/admin/daily-chart";
 import { formatDateTime } from "@/lib/utils";
 
@@ -10,6 +11,7 @@ import { formatDateTime } from "@/lib/utils";
 export const instant = false;
 
 async function getStats() {
+  await requireAdmin();
   await connection();
   const kpis = (await db.execute(sql`
     select

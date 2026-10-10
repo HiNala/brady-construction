@@ -2,6 +2,7 @@ import Link from "next/link";
 import { connection } from "next/server";
 import { Plus, Eye, FileText } from "lucide-react";
 import { getAllPostsAdmin } from "@/lib/posts";
+import { requireAdmin } from "@/lib/auth";
 import { formatDate } from "@/lib/utils";
 import { cn } from "@/lib/utils";
 
@@ -9,6 +10,7 @@ import { cn } from "@/lib/utils";
 export const instant = false;
 
 export default async function AdminBlogPage() {
+  await requireAdmin();
   await connection();
   const posts = await getAllPostsAdmin();
 

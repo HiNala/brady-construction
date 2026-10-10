@@ -1,6 +1,7 @@
 import { desc } from "drizzle-orm";
 import { connection } from "next/server";
 import { db } from "@/lib/db";
+import { requireAdmin } from "@/lib/auth";
 import { leads } from "@/lib/db/schema";
 import { LeadsTable } from "@/components/admin/leads-table";
 
@@ -8,6 +9,7 @@ import { LeadsTable } from "@/components/admin/leads-table";
 export const instant = false;
 
 export default async function AdminLeadsPage() {
+  await requireAdmin();
   await connection();
   const rows = await db.select().from(leads).orderBy(desc(leads.createdAt)).limit(500);
   return (

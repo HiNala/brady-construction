@@ -1,12 +1,14 @@
 import { sql } from "drizzle-orm";
 import { connection } from "next/server";
 import { db } from "@/lib/db";
+import { requireAdmin } from "@/lib/auth";
 import { DailyChart } from "@/components/admin/daily-chart";
 
 // Admin is fully dynamic — opt out of instant-navigation validation
 export const instant = false;
 
 export default async function AdminAnalyticsPage() {
+  await requireAdmin();
   await connection();
 
   const daily = (await db.execute(sql`
