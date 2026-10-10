@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-export function NewsletterForm() {
+export function NewsletterForm({ variant = "dark" }: { variant?: "dark" | "light" }) {
   const [email, setEmail] = useState("");
   const [state, setState] = useState<"idle" | "loading" | "done" | "error">("idle");
+  const light = variant === "light";
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -28,7 +30,7 @@ export function NewsletterForm() {
 
   if (state === "done") {
     return (
-      <p className="mt-4 flex items-center gap-2 text-sm text-brass-bright">
+      <p className={cn("mt-4 flex items-center gap-2 text-sm", light ? "text-brass-deep" : "text-brass-bright")}>
         <CheckCircle2 className="h-4 w-4" /> You&apos;re on the list — thank you.
       </p>
     );
@@ -37,15 +39,22 @@ export function NewsletterForm() {
   return (
     <form onSubmit={submit} className="mt-4">
       <label htmlFor="nl-email" className="sr-only">Email address</label>
-      <div className="flex overflow-hidden rounded-full border border-bone/20 bg-bone/5 backdrop-blur">
+      <div className={cn(
+        "flex overflow-hidden rounded-full border backdrop-blur",
+        light ? "border-ink/15 bg-bone" : "border-bone/20 bg-bone/5"
+      )}>
         <input
           id="nl-email"
           type="email"
+          autoComplete="email"
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@email.com"
-          className="w-full bg-transparent px-4 py-3 text-sm text-bone placeholder:text-bone/40 focus:outline-none"
+          className={cn(
+            "w-full bg-transparent px-4 py-3 text-sm focus:outline-none",
+            light ? "text-ink placeholder:text-ink/40" : "text-bone placeholder:text-bone/40"
+          )}
         />
         <button
           type="submit"
@@ -57,7 +66,7 @@ export function NewsletterForm() {
         </button>
       </div>
       {state === "error" && (
-        <p className="mt-2 text-xs text-red-300">Something went wrong — please try again.</p>
+        <p className={cn("mt-2 text-xs", light ? "text-red-700" : "text-red-300")}>Something went wrong — please try again.</p>
       )}
     </form>
   );

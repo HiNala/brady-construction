@@ -22,6 +22,26 @@ export function StickyCta() {
   return (
     <AnimatePresence>
       {show && (
+        <>
+        <motion.div
+          initial={{ y: 90, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 90, opacity: 0 }}
+          transition={{ type: "spring", damping: 26, stiffness: 260 }}
+          className="fixed bottom-5 right-5 z-40 hidden lg:block"
+        >
+          <Link
+            href="/contact"
+            data-track="cta_click"
+            data-track-label="sticky_desktop"
+            className="group flex items-center gap-3 rounded-full bg-brass py-3.5 pl-6 pr-3.5 text-sm font-bold text-ink shadow-[var(--shadow-lift)] transition-colors hover:bg-brass-bright"
+          >
+            Get a Free Quote
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-ink/10 transition-transform group-hover:translate-x-0.5">
+              <ArrowRight className="h-4 w-4" />
+            </span>
+          </Link>
+        </motion.div>
         <motion.div
           initial={{ y: 90 }}
           animate={{ y: 0 }}
@@ -49,6 +69,7 @@ export function StickyCta() {
             </Link>
           </div>
         </motion.div>
+        </>
       )}
     </AnimatePresence>
   );

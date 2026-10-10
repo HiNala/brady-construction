@@ -7,7 +7,7 @@ export const HOME_FAQS = [
   },
   {
     q: "Are you licensed and insured?",
-    a: "Yes. Brady Construction Company is a California licensed general contractor, License #479385, continuously since 1980 — fully insured for every project we take on.",
+    a: "Yes. Brady Construction Company is a California licensed general contractor, License #479385, and fully insured on every project we take on. The company has been family-owned and operated since 1980.",
   },
   {
     q: "Do we need architectural plans before calling you?",
@@ -24,6 +24,25 @@ export const HOME_FAQS = [
   {
     q: "What kinds of clients do you work with?",
     a: `Homeowners, architects, fellow contractors, realtors, owner-builders and investors. We've spent ${SITE.yearsInBusiness} years being the crew other builders call for the challenging jobs — hillside foundations, seismic work, wall removals and historic restoration.`,
+  },
+];
+
+export const CONTACT_FAQS = [
+  {
+    q: "How fast will we hear back?",
+    a: "Patrick reviews every request personally and replies usually within one business day — never a call center, never a sales pitch.",
+  },
+  {
+    q: "Is my project too small?",
+    a: "We focus on substantial work — full remodels, additions, foundations and custom builds. If your project isn't the right fit, we'll tell you honestly and point you the right way.",
+  },
+  {
+    q: "What happens after I send the form?",
+    a: "Patrick reads it, emails or calls to talk through your ideas and budget, then schedules a site walk if it makes sense. No obligation at any step.",
+  },
+  {
+    q: "Where do you work?",
+    a: `Across the Bay Area — Sonoma, Marin, Napa, Woodside & the Peninsula, San Francisco, plus the East and North Bay. In business since ${SITE.founded}.`,
   },
 ];
 

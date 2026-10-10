@@ -74,7 +74,7 @@ export function Footer() {
             </ul>
             <h3 className="kicker mt-8 text-brass-bright">Service Areas</h3>
             <ul className="mt-4 space-y-2">
-              {AREAS.slice(0, 4).map((a) => (
+              {AREAS.map((a) => (
                 <li key={a.slug}>
                   <Link
                     href={`/areas/${a.slug}`}

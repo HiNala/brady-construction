@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Mail, MapPin, Clock, ShieldCheck, ArrowUpRight } from "lucide-react";
 import { SITE, absoluteUrl } from "@/lib/site";
+import { CONTACT_FAQS } from "@/data/content";
 import { Container, Section, Kicker, Display } from "@/components/ui";
 import { Reveal } from "@/components/reveal";
 import { QuoteForm } from "@/components/forms/quote-form";
+import { Faq } from "@/components/faq";
 import { JsonLd } from "@/components/json-ld";
 
 export const metadata: Metadata = {
@@ -24,6 +26,17 @@ export default function ContactPage() {
           url: absoluteUrl("/contact"),
         }}
       />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: CONTACT_FAQS.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }}
+      />
       <section className="relative overflow-hidden bg-ink pb-14 pt-40 text-bone sm:pt-48">
         <Container className="relative z-10">
           <Reveal><Kicker light>Quotes &amp; consultations</Kicker></Reveal>
@@ -35,7 +48,8 @@ export default function ContactPage() {
           <Reveal delay={0.12}>
             <p className="mt-6 max-w-2xl text-[16px] leading-relaxed text-bone/65">
               When you&apos;re serious and ready — you know your budget, your
-              wishes — that&apos;s the perfect time to reach out.
+              wishes — that&apos;s the perfect time to reach out. Patrick replies
+              personally, usually within one business day.
             </p>
           </Reveal>
         </Container>
@@ -101,6 +115,20 @@ export default function ContactPage() {
             </div>
             <Reveal delay={0.1}>
               <QuoteForm source="contact" />
+            </Reveal>
+          </div>
+
+          <div className="mx-auto mt-20 max-w-3xl">
+            <Reveal>
+              <Kicker>Good to know</Kicker>
+            </Reveal>
+            <Reveal delay={0.06}>
+              <h2 className="display mt-4 text-3xl font-medium sm:text-4xl">
+                Before you hit send
+              </h2>
+            </Reveal>
+            <Reveal delay={0.12} className="mt-8">
+              <Faq items={CONTACT_FAQS} />
             </Reveal>
           </div>
         </Container>

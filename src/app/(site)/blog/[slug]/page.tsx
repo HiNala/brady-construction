@@ -14,6 +14,7 @@ import { Container, Kicker, Display } from "@/components/ui";
 import { Reveal } from "@/components/reveal";
 import { ShareBar } from "@/components/share-bar";
 import { CtaBand } from "@/components/cta-band";
+import { NewsletterForm } from "@/components/forms/newsletter-form";
 import { JsonLd } from "@/components/json-ld";
 
 // Seed slugs prerender; DB-posts render on demand (blocking allowed)
@@ -150,6 +151,19 @@ export default async function BlogPostPage({
                 ))}
               </div>
             )}
+
+            <Reveal className="mt-12">
+              <div className="rounded-2xl border border-ink/10 bg-cream p-7 sm:p-9">
+                <h2 className="display text-2xl font-medium">Remodeling guides, by email</h2>
+                <p className="mt-2 max-w-lg text-[14px] leading-relaxed text-ink/60">
+                  Cost ranges, permit know-how and honest advice — a few times a
+                  year, from a contractor who&apos;s been at it for four decades.
+                </p>
+                <div className="max-w-md">
+                  <NewsletterForm variant="light" />
+                </div>
+              </div>
+            </Reveal>
           </div>
         </Container>
 

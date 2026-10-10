@@ -263,6 +263,7 @@ export function QuoteForm({ source = "contact" }: { source?: string }) {
               <label htmlFor="city" className={labelCls}>Project city</label>
               <input
                 id="city"
+                autoComplete="address-level2"
                 {...register("city")}
                 placeholder="Sonoma, Woodside, San Rafael…"
                 className={inputCls}
@@ -287,19 +288,19 @@ export function QuoteForm({ source = "contact" }: { source?: string }) {
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
                 <label htmlFor="name" className={labelCls}>Name</label>
-                <input id="name" {...register("name")} placeholder="Your name" className={inputCls} />
+                <input id="name" autoComplete="name" {...register("name")} placeholder="Your name" className={inputCls} />
                 <FieldError>{errors.name?.message}</FieldError>
               </div>
               <div>
                 <label htmlFor="email" className={labelCls}>Email</label>
-                <input id="email" type="email" {...register("email")} placeholder="you@email.com" className={inputCls} />
+                <input id="email" type="email" autoComplete="email" {...register("email")} placeholder="you@email.com" className={inputCls} />
                 <FieldError>{errors.email?.message}</FieldError>
               </div>
             </div>
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
                 <label htmlFor="phone" className={labelCls}>Phone <span className="normal-case tracking-normal text-ink/40">(optional)</span></label>
-                <input id="phone" type="tel" {...register("phone")} placeholder="(707) 555-0123" className={inputCls} />
+                <input id="phone" type="tel" autoComplete="tel" {...register("phone")} placeholder="(707) 555-0123" className={inputCls} />
               </div>
               <div>
                 <span className={labelCls}>Preferred contact</span>
@@ -376,8 +377,8 @@ export function QuoteForm({ source = "contact" }: { source?: string }) {
       {serverError && (
         <p className="mt-4 rounded-lg bg-red-50 px-4 py-3 text-[13px] text-red-800">{serverError}</p>
       )}
-      <p className="mt-5 text-center text-[12px] text-ink/45">
-        No spam, no pressure. Your details go straight to Patrick — that&apos;s it.
+      <p className="mt-5 text-center text-[12px] leading-relaxed text-ink/45">
+        No spam, no pressure — Patrick replies personally, usually within one business day.
       </p>
     </form>
   );
