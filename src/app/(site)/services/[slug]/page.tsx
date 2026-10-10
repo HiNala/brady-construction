@@ -28,6 +28,9 @@ export function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.slug }));
 }
 
+// Params resolve at build for listed slugs; allow blocking for others
+export const instant = false;
+
 export async function generateMetadata({
   params,
 }: {

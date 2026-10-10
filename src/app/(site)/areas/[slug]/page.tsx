@@ -14,6 +14,9 @@ export function generateStaticParams() {
   return AREAS.map((a) => ({ slug: a.slug }));
 }
 
+// Params resolve at build for listed slugs; allow blocking for others
+export const instant = false;
+
 export async function generateMetadata({
   params,
 }: {
