@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GALLERY } from "@/lib/gallery";
 import { absoluteUrl, SITE } from "@/lib/site";
+import { JsonLd } from "@/components/json-ld";
 import { Container, Section, Kicker, Display } from "@/components/ui";
 import { Reveal } from "@/components/reveal";
 import { GalleryGrid } from "@/components/gallery";
@@ -23,6 +24,19 @@ const YT_VIDEOS = [
 export default function WorkPage() {
   return (
     <>
+      <JsonLd
+        data={YT_VIDEOS.map((v) => ({
+          "@context": "https://schema.org",
+          "@type": "VideoObject",
+          name: v.title,
+          description: `${SITE.name} project video — real remodels and builds across the San Francisco Bay Area.`,
+          uploadDate: "2020-01-01",
+          thumbnailUrl: `https://i.ytimg.com/vi/${v.id}/maxresdefault.jpg`,
+          embedUrl: `https://www.youtube.com/embed/${v.id}`,
+          isFamilyFriendly: true,
+          publisher: { "@id": `${SITE.url}/#business` },
+        }))}
+      />
       <section className="relative overflow-hidden bg-ink pb-16 pt-40 text-bone sm:pt-48">
         <Container className="relative z-10">
           <Reveal><Kicker light>Portfolio</Kicker></Reveal>

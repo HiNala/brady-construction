@@ -14,9 +14,23 @@ export default async function AdminLeadsPage() {
   const rows = await db.select().from(leads).orderBy(desc(leads.createdAt)).limit(500);
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-wrap items-center justify-between gap-4">
         <h1 className="display text-3xl font-medium">Leads</h1>
-        <p className="text-[13px] text-bone/50">{rows.length} total</p>
+        <div className="flex items-center gap-4">
+          <a
+            href="/api/admin/leads.csv"
+            className="rounded-full border border-bone/20 px-4 py-1.5 text-[12px] font-semibold text-bone/70 transition-colors hover:border-brass hover:text-bone"
+          >
+            Export CSV
+          </a>
+          <a
+            href="/api/admin/leads.csv?kind=newsletter"
+            className="rounded-full border border-bone/20 px-4 py-1.5 text-[12px] font-semibold text-bone/70 transition-colors hover:border-brass hover:text-bone"
+          >
+            Newsletter list
+          </a>
+          <p className="text-[13px] text-bone/50">{rows.length} total</p>
+        </div>
       </div>
       <LeadsTable
         leads={rows.map((l) => ({
