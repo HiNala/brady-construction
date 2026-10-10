@@ -3,6 +3,9 @@ import { connection } from "next/server";
 import { db } from "@/lib/db";
 import { DailyChart } from "@/components/admin/daily-chart";
 
+// Admin is fully dynamic — opt out of instant-navigation validation
+export const instant = false;
+
 export default async function AdminAnalyticsPage() {
   await connection();
 

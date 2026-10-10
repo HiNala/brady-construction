@@ -5,6 +5,9 @@ import { getAllPostsAdmin } from "@/lib/posts";
 import { formatDate } from "@/lib/utils";
 import { cn } from "@/lib/utils";
 
+// Admin is fully dynamic — opt out of instant-navigation validation
+export const instant = false;
+
 export default async function AdminBlogPage() {
   await connection();
   const posts = await getAllPostsAdmin();

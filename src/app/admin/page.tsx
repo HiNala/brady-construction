@@ -6,6 +6,9 @@ import { connection } from "next/server";
 import { DailyChart } from "@/components/admin/daily-chart";
 import { formatDateTime } from "@/lib/utils";
 
+// Admin is fully dynamic — opt out of instant-navigation validation
+export const instant = false;
+
 async function getStats() {
   await connection();
   const kpis = (await db.execute(sql`

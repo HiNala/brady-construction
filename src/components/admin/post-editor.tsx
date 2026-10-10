@@ -262,7 +262,7 @@ export function PostEditor({ initial }: { initial?: EditablePost }) {
             <span className={labelCls}>Cover image</span>
             {p.coverImage ? (
               <div className="relative aspect-[16/9] overflow-hidden rounded-lg border border-bone/15">
-                <Image src={p.coverImage} alt={p.coverAlt ?? ""} fill className="object-cover" />
+                <Image src={p.coverImage} alt={p.coverAlt ?? ""} fill sizes="400px" className="object-cover" />
               </div>
             ) : (
               <div className="flex aspect-[16/9] items-center justify-center rounded-lg border border-dashed border-bone/20 text-[12px] text-bone/35">

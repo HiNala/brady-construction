@@ -4,6 +4,9 @@ import { db } from "@/lib/db";
 import { leads } from "@/lib/db/schema";
 import { LeadsTable } from "@/components/admin/leads-table";
 
+// Admin is fully dynamic — opt out of instant-navigation validation
+export const instant = false;
+
 export default async function AdminLeadsPage() {
   await connection();
   const rows = await db.select().from(leads).orderBy(desc(leads.createdAt)).limit(500);

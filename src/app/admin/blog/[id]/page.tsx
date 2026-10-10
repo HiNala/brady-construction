@@ -6,6 +6,9 @@ import { posts } from "@/lib/db/schema";
 import { SEED_POSTS } from "@/data/posts";
 import { PostEditor, type EditablePost } from "@/components/admin/post-editor";
 
+// Admin is fully dynamic — opt out of instant-navigation validation
+export const instant = false;
+
 export default async function EditPostPage({
   params,
 }: {
