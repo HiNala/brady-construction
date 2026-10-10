@@ -4,22 +4,25 @@ import { cookies } from "next/headers";
 const COOKIE_NAME = "bc_admin";
 const SESSION_TTL_MS = 1000 * 60 * 60 * 12; // 12h
 
-function secret(): string {
-  return (
-    process.env.SESSION_SECRET ??
-    process.env.DATABASE_URL ??
-    "brady-dev-secret-change-me"
-  );
+function secret(): string | null {
+  const s = process.env.SESSION_SECRET;
+  if (s) return s;
+  // Production must set SESSION_SECRET — a guessable fallback would let
+  // anyone forge admin cookies.
+  if (process.env.NODE_ENV === "production") return null;
+  return process.env.DATABASE_URL ?? "brady-dev-secret-change-me";
 }
 
-function sign(payload: string): string {
-  return createHmac("sha256", secret()).update(payload).digest("hex");
+function sign(payload: string): string | null {
+  const s = secret();
+  return s ? createHmac("sha256", s).update(payload).digest("hex") : null;
 }
 
-export function createSessionToken(): string {
+export function createSessionToken(): string | null {
   const exp = Date.now() + SESSION_TTL_MS;
   const payload = `admin.${exp}`;
-  return `${payload}.${sign(payload)}`;
+  const sig = sign(payload);
+  return sig ? `${payload}.${sig}` : null;
 }
 
 export function verifySessionToken(token: string | undefined): boolean {
@@ -29,6 +32,7 @@ export function verifySessionToken(token: string | undefined): boolean {
   const [who, exp, sig] = parts;
   if (who !== "admin") return false;
   const expected = sign(`${who}.${exp}`);
+  if (!expected) return false;
   const a = Buffer.from(sig);
   const b = Buffer.from(expected);
   if (a.length !== b.length || !timingSafeEqual(a, b)) return false;

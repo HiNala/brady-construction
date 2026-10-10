@@ -19,7 +19,11 @@ export async function POST(req: NextRequest) {
   if (!parsed.success || !verifyCredentials(parsed.data.email, parsed.data.password)) {
     return NextResponse.json({ error: "Invalid credentials" }, { status: 401 });
   }
+  const token = createSessionToken();
+  if (!token) {
+    return NextResponse.json({ error: "Server not configured" }, { status: 503 });
+  }
   const res = NextResponse.json({ ok: true });
-  res.cookies.set(adminCookie.name, createSessionToken(), adminCookie.options);
+  res.cookies.set(adminCookie.name, token, adminCookie.options);
   return res;
 }
