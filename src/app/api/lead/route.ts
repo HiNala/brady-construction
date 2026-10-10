@@ -4,6 +4,7 @@ import { eq } from "drizzle-orm";
 import { db } from "@/lib/db";
 import { leads, sessions } from "@/lib/db/schema";
 import { sendLeadEmail, leadEmailHtml } from "@/lib/email";
+import { rateLimit } from "@/lib/rate-limit";
 
 
 const leadSchema = z.object({
@@ -25,6 +26,18 @@ const leadSchema = z.object({
 });
 
 export async function POST(req: NextRequest) {
+  // Throttle lead submissions per IP — honeypot catches naive bots, this stops floods
+  const ip =
+    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ??
+    req.headers.get("x-real-ip") ??
+    "anon";
+  if (!rateLimit(`lead:${ip}`, 5, 60_000)) {
+    return NextResponse.json(
+      { error: "Too many requests — please try again shortly." },
+      { status: 429 }
+    );
+  }
+
   let body: unknown;
   try {
     body = await req.json();

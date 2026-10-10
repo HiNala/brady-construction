@@ -1,7 +1,7 @@
 "use client";
 
 import { Fragment, useMemo, useState } from "react";
-import { ChevronDown, Mail, Inbox } from "lucide-react";
+import { ChevronDown, Mail, Inbox, Trash2 } from "lucide-react";
 import { cn, formatDateTime } from "@/lib/utils";
 
 export type LeadRow = {
@@ -64,6 +64,16 @@ export function LeadsTable({ leads: initial }: { leads: LeadRow[] }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id, notes: notes[id] ?? "" }),
     });
+  }
+
+  async function deleteLead(id: number) {
+    if (!confirm("Delete this lead permanently?")) return;
+    const res = await fetch("/api/admin/leads", {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id }),
+    });
+    if (res.ok) setLeads((ls) => ls.filter((l) => l.id !== id));
   }
 
   const chip = (active: boolean) =>
@@ -198,6 +208,13 @@ export function LeadsTable({ leads: initial }: { leads: LeadRow[] }) {
                               >
                                 Reply by email
                               </a>
+                              <button
+                                onClick={() => deleteLead(l.id)}
+                                aria-label="Delete lead"
+                                className="ml-auto rounded-lg border border-red-400/25 px-3 py-2 text-[12px] font-semibold text-red-300/80 transition-colors hover:border-red-400/60 hover:text-red-300"
+                              >
+                                <Trash2 className="h-3.5 w-3.5" />
+                              </button>
                             </div>
                           </div>
                         </div>

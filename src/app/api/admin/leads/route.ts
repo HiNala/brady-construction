@@ -26,3 +26,11 @@ export async function PATCH(req: NextRequest) {
   await db.update(leads).set(fields).where(eq(leads.id, id));
   return NextResponse.json({ ok: true });
 }
+
+export async function DELETE(req: NextRequest) {
+  if (!(await isAdmin())) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  const parsed = z.object({ id: z.number() }).safeParse(await req.json().catch(() => ({})));
+  if (!parsed.success) return NextResponse.json({ error: "Invalid" }, { status: 422 });
+  await db.delete(leads).where(eq(leads.id, parsed.data.id));
+  return NextResponse.json({ ok: true });
+}
