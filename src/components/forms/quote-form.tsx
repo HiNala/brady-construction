@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { AnimatePresence, motion } from "framer-motion";
@@ -59,7 +59,7 @@ export function QuoteForm({ source = "contact" }: { source?: string }) {
     register,
     handleSubmit,
     setValue,
-    watch,
+    control,
     trigger,
     formState: { errors },
   } = useForm<Values>({
@@ -71,9 +71,11 @@ export function QuoteForm({ source = "contact" }: { source?: string }) {
     },
   });
 
-  const projectType = watch("projectType");
-  const budget = watch("budget");
-  const timeline = watch("timeline");
+  const projectType = useWatch({ control, name: "projectType" });
+  const budget = useWatch({ control, name: "budget" });
+  const timeline = useWatch({ control, name: "timeline" });
+  const preferredContact = useWatch({ control, name: "preferredContact" });
+  const submittedName = useWatch({ control, name: "name" });
 
   function pick(field: "projectType" | "budget" | "timeline", value: string) {
     setValue(field, value, { shouldValidate: true });
@@ -120,7 +122,7 @@ export function QuoteForm({ source = "contact" }: { source?: string }) {
           <CheckCircle2 className="h-8 w-8 text-brass-deep" />
         </span>
         <h3 className="display mt-6 text-3xl font-medium text-ink">
-          Thank you, {watch("name").split(" ")[0]}.
+          Thank you, {(submittedName ?? "").split(" ")[0]}.
         </h3>
         <p className="mx-auto mt-3 max-w-md text-[15px] leading-relaxed text-ink/65">
           Your project details are on their way to Patrick. Expect a personal
@@ -309,7 +311,7 @@ export function QuoteForm({ source = "contact" }: { source?: string }) {
                       onClick={() => setValue("preferredContact", m)}
                       className={cn(
                         "flex-1 rounded-lg border px-4 py-3 text-sm font-medium capitalize transition-all",
-                        watch("preferredContact") === m
+                        preferredContact === m
                           ? "border-brass bg-brass/10 text-ink"
                           : "border-ink/15 text-ink/60"
                       )}
