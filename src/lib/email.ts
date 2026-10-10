@@ -6,7 +6,7 @@ const TO = process.env.LEAD_EMAIL_TO ?? "atbbrady@yahoo.com";
 const FROM =
   process.env.LEAD_EMAIL_FROM ?? "Brady Construction <leads@bradyremodel.com>";
 
-async function sendViaResend(subject: string, html: string, replyTo?: string) {
+async function sendViaResend(subject: string, html: string, to: string, replyTo?: string) {
   const key = process.env.RESEND_API_KEY;
   if (!key) return false;
   const res = await fetch("https://api.resend.com/emails", {
@@ -14,7 +14,7 @@ async function sendViaResend(subject: string, html: string, replyTo?: string) {
     headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
     body: JSON.stringify({
       from: FROM,
-      to: [TO],
+      to: [to],
       subject,
       html,
       reply_to: replyTo,
@@ -24,7 +24,7 @@ async function sendViaResend(subject: string, html: string, replyTo?: string) {
   return true;
 }
 
-async function sendViaSmtp(subject: string, html: string, replyTo?: string) {
+async function sendViaSmtp(subject: string, html: string, to: string, replyTo?: string) {
   const host = process.env.SMTP_HOST;
   if (!host) return false;
   const transport = nodemailer.createTransport({
@@ -35,22 +35,24 @@ async function sendViaSmtp(subject: string, html: string, replyTo?: string) {
       ? { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS }
       : undefined,
   });
-  await transport.sendMail({ from: FROM, to: TO, subject, html, replyTo });
+  await transport.sendMail({ from: FROM, to, subject, html, replyTo });
   return true;
 }
 
 export async function sendLeadEmail(opts: {
   leadId?: number;
+  to?: string;
   subject: string;
   html: string;
   replyTo?: string;
 }): Promise<{ sent: boolean; error?: string }> {
+  const to = opts.to ?? TO;
   let status = "skipped";
   let error: string | undefined;
   try {
-    if (await sendViaResend(opts.subject, opts.html, opts.replyTo)) {
+    if (await sendViaResend(opts.subject, opts.html, to, opts.replyTo)) {
       status = "sent";
-    } else if (await sendViaSmtp(opts.subject, opts.html, opts.replyTo)) {
+    } else if (await sendViaSmtp(opts.subject, opts.html, to, opts.replyTo)) {
       status = "sent";
     }
   } catch (e) {
@@ -60,7 +62,7 @@ export async function sendLeadEmail(opts: {
   try {
     await db.insert(emailLog).values({
       leadId: opts.leadId ?? null,
-      to: TO,
+      to,
       subject: opts.subject,
       status,
       error,

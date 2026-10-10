@@ -120,6 +120,23 @@ export async function POST(req: NextRequest) {
     replyTo: d.email,
   });
 
+  // Newsletter subscribers get a welcome email (first touch of the email channel)
+  if (d.kind === "newsletter" && d.emailOptIn) {
+    await sendLeadEmail({
+      to: d.email,
+      subject: "You're on the list — Brady Construction",
+      replyTo: "atbbrady@yahoo.com",
+      html: `<div style="font-family:Georgia,serif;max-width:520px;margin:auto;border:1px solid #e4dccb;border-radius:8px;overflow:hidden">
+  <div style="background:#16130e;color:#f7f3ea;padding:18px 24px;font-size:17px">Brady Construction Company</div>
+  <div style="padding:22px 24px;font-size:14.5px;line-height:1.7;color:#16130e">
+    <p>Thanks for subscribing — you'll get our remodeling guides, cost breakdowns and project stories a few times a year. Never spam.</p>
+    <p style="margin:14px 0">And if a project is brewing — a remodel, an addition, a hillside foundation — just reply to this email. It goes straight to Patrick.</p>
+    <p style="margin-top:18px">— The Brady family<br><span style="color:#8a7f6d;font-size:12.5px">Family-owned &amp; operated since 1980 · CA License #479385</span></p>
+  </div>
+</div>`,
+    });
+  }
+
   if (sent && leadId) {
     await db.update(leads).set({ emailSent: true }).where(eq(leads.id, leadId));
   }
