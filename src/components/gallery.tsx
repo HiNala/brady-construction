@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, ChevronLeft, ChevronRight, Expand } from "lucide-react";
@@ -23,7 +23,20 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
     [active, images]
   );
 
-  const close = useCallback(() => setLightbox(null), []);
+  const closeBtnRef = useRef<HTMLButtonElement>(null);
+  const lastTrigger = useRef<Element | null>(null);
+
+  function open(i: number) {
+    lastTrigger.current = document.activeElement;
+    setLightbox(i);
+  }
+
+  const close = useCallback(() => {
+    setLightbox(null);
+    requestAnimationFrame(() =>
+      (lastTrigger.current as HTMLElement | null)?.focus?.()
+    );
+  }, []);
   const nav = useCallback(
     (dir: number) =>
       setLightbox((i) =>
@@ -34,6 +47,7 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
 
   useEffect(() => {
     if (lightbox === null) return;
+    closeBtnRef.current?.focus();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") close();
       if (e.key === "ArrowRight") nav(1);
@@ -82,7 +96,7 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
               exit={{ opacity: 0, scale: 0.94 }}
               transition={{ duration: 0.35 }}
               onClick={() => {
-                setLightbox(i);
+                open(i);
                 window.bctrack?.("gallery_view", { src: img.src, category: img.category });
               }}
               className="group relative mb-4 block w-full overflow-hidden rounded-xl text-left focus-visible:outline-2 focus-visible:outline-brass"
@@ -123,6 +137,7 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
             aria-label="Image lightbox"
           >
             <button
+              ref={closeBtnRef}
               onClick={close}
               aria-label="Close"
               className="absolute right-5 top-5 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-bone/25 text-bone transition-colors hover:bg-bone/10"
