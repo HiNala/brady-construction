@@ -28,7 +28,7 @@ export default function WorkPage() {
           <Reveal><Kicker light>Portfolio</Kicker></Reveal>
           <Reveal delay={0.06}>
             <Display as="h1" className="mt-5 max-w-3xl text-5xl text-bone sm:text-6xl">
-              Forty-five years<br />of real work
+              {SITE.yearsInBusiness} years<br />of real work
             </Display>
           </Reveal>
           <Reveal delay={0.12}>

@@ -1,3 +1,5 @@
+import { SITE } from "@/lib/site";
+
 export const HOME_FAQS = [
   {
     q: "How much does a home remodel cost in the Bay Area?",
@@ -21,7 +23,7 @@ export const HOME_FAQS = [
   },
   {
     q: "What kinds of clients do you work with?",
-    a: "Homeowners, architects, fellow contractors, realtors, owner-builders and investors. We've spent 45 years being the crew other builders call for the challenging jobs — hillside foundations, seismic work, wall removals and historic restoration.",
+    a: `Homeowners, architects, fellow contractors, realtors, owner-builders and investors. We've spent ${SITE.yearsInBusiness} years being the crew other builders call for the challenging jobs — hillside foundations, seismic work, wall removals and historic restoration.`,
   },
 ];
 
@@ -79,7 +81,7 @@ export const PROJECT_SPOTLIGHTS = [
 export const TRUST_CHIPS = [
   "CA License #479385",
   "Family owned since 1980",
-  "45+ years in the Bay Area",
+  `${SITE.yearsInBusiness}+ years in the Bay Area`,
   "Insured & bonded",
   "Meetings by appointment",
 ];

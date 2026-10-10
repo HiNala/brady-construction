@@ -5,7 +5,7 @@ import { Suspense } from "react";
 import { connection } from "next/server";
 import { ArrowRight, Rss } from "lucide-react";
 import { getPublishedPosts } from "@/lib/posts";
-import { absoluteUrl } from "@/lib/site";
+import { absoluteUrl, SITE } from "@/lib/site";
 import { formatDate } from "@/lib/utils";
 import { Container, Section, Kicker, Display } from "@/components/ui";
 import { Reveal } from "@/components/reveal";
@@ -14,7 +14,7 @@ import { CtaBand } from "@/components/cta-band";
 export const metadata: Metadata = {
   title: "The Journal — Bay Area Remodeling Guides & Cost Breakdowns",
   description:
-    "Remodeling wisdom from 45 years of Bay Area building: real cost guides, structural explainers, planning playbooks for Sonoma, Marin, Napa, the Peninsula and SF.",
+    `Remodeling wisdom from ${SITE.yearsInBusiness} years of Bay Area building: real cost guides, structural explainers, planning playbooks for Sonoma, Marin, Napa, the Peninsula and SF.`,
   alternates: { canonical: absoluteUrl("/blog"), types: { "application/rss+xml": absoluteUrl("/feed.xml") } },
 };
 

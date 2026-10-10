@@ -6,7 +6,7 @@ import { Reveal } from "./reveal";
 
 export function CtaBand({
   title = "Ready to transform your home?",
-  text = "Tell us your ideas and your budget. You'll get a straight answer and a real plan — from a builder with 45 years of Bay Area craft behind him.",
+  text = `Tell us your ideas and your budget. You'll get a straight answer and a real plan — from a builder with ${SITE.yearsInBusiness} years of Bay Area craft behind him.`,
 }: {
   title?: string;
   text?: string;

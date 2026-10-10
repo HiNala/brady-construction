@@ -188,7 +188,7 @@ A properly engineered opening adds real value and transforms how a home lives. A
 
 Crawl space inspection first — that's where the answers live. Homes built before ~1980, hillside homes, and homes with open ground floors deserve the closest look. An experienced contractor can usually tell you in one visit whether you need a $6,000 fix or a bigger conversation.
 
-*After 45 years of Bay Area foundations — including plenty of hillside work — we've seen most of what the ground can do. [Get an assessment](/contact).*`,
+*After 46 years of Bay Area foundations — including plenty of hillside work — we've seen most of what the ground can do. [Get an assessment](/contact).*`,
   },
   {
     slug: "home-addition-vs-moving-bay-area",
@@ -336,7 +336,7 @@ Build the **addition** when the goal is how you live every day. Build the **ADU*
     slug: "how-to-choose-general-contractor-bay-area",
     title: "How to Choose a General Contractor in the Bay Area (Without Getting Burned)",
     excerpt:
-      "The license check, the bid red flags, the questions that reveal everything — a 45-year contractor's guide to hiring a contractor.",
+      "The license check, the bid red flags, the questions that reveal everything — a 46-year contractor's guide to hiring a contractor.",
     coverImage: "/images/gallery/people-005.webp",
     coverAlt: "Contractor reviewing plans at a home's front door",
     category: "Planning",
@@ -346,7 +346,7 @@ Build the **addition** when the goal is how you live every day. Build the **ADU*
     metaDescription:
       "Hire a Bay Area general contractor without regret: CSLB license checks, insurance, bid red flags, and the questions that separate pros from problems.",
     publishedAt: "2026-11-02",
-    body: `After 45 years in this trade — including decades of being the guy called in to fix other people's work — here's the honest playbook for hiring a Bay Area general contractor.
+    body: `After 46 years in this trade — including decades of being the guy called in to fix other people's work — here's the honest playbook for hiring a Bay Area general contractor.
 
 ## Step 1: The license check (two minutes)
 
