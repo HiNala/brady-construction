@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Mail, MapPin, Clock, ShieldCheck, ArrowUpRight } from "lucide-react";
 import { SITE, absoluteUrl } from "@/lib/site";
 import { CONTACT_FAQS } from "@/data/content";
@@ -104,11 +105,24 @@ export default function ContactPage() {
               </Reveal>
               <Reveal delay={0.08}>
                 <div className="rounded-2xl border border-brass/30 bg-brass/8 p-6">
-                  <p className="flex items-start gap-3 text-[14px] leading-relaxed text-ink/70">
-                    <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-brass-deep" />
+                  <div className="flex items-center gap-4">
+                    <Image
+                      src="/images/gallery/people-062.webp"
+                      alt="Patrick Brady holding rolled plans at a client's front door"
+                      width={72}
+                      height={72}
+                      className="h-16 w-16 shrink-0 rounded-full border-2 border-brass/40 object-cover"
+                    />
+                    <p className="text-[14px] leading-relaxed text-ink/70">
+                      <span className="font-semibold text-ink">This is Patrick.</span>{" "}
+                      He personally reads every request — your details go to him
+                      alone, never sold, never shared.
+                    </p>
+                  </div>
+                  <p className="mt-4 flex items-start gap-3 border-t border-brass/20 pt-4 text-[13px] leading-relaxed text-ink/60">
+                    <ShieldCheck className="mt-0.5 h-4.5 w-4.5 shrink-0 text-brass-deep" />
                     California Contractor License #{SITE.license} · Licensed,
-                    insured &amp; family operated since {SITE.founded}. Your
-                    project details go directly to Patrick — never sold, never shared.
+                    insured &amp; family operated since {SITE.founded}.
                   </p>
                 </div>
               </Reveal>
