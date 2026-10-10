@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
+import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const variants: Variants = {
@@ -23,6 +23,8 @@ export function Reveal({
   delay?: number;
   once?: boolean;
 }) {
+  const reduced = useReducedMotion();
+  if (reduced) return <div className={cn(className)}>{children}</div>;
   return (
     <motion.div
       className={cn(className)}
