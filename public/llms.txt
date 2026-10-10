@@ -1,0 +1,53 @@
+# Brady Construction Company
+
+> A family-owned and operated California general contractor (License #479385)
+> serving the San Francisco Bay Area and Northern California since 1980.
+> Specializes in large remodels and "wow transformations" — open-concept
+> kitchens and great rooms, bathrooms, additions, hillside foundations,
+> seismic retrofits, basements, historic restoration and custom builds.
+
+## Business
+
+- Legal name: Brady Construction Company (brand: Brady Remodel)
+- License: California CSLB #479385
+- Founded: 1980 (40+ years in business)
+- Location: 8 Cedar Lane, Woodside, CA 94062 — meetings by appointment
+- Contact: atbbrady@yahoo.com
+- Primary contact: Patrick Brady (owner)
+- Structure: family owned and operated
+- Partners with: architects, designers, realtors, owner-builders, fellow contractors, property investors (including joint ventures on distressed/fixer properties)
+
+## Services
+
+- Kitchen remodeling — open-concept and great-room transformations
+- Bathroom remodeling — master and guest
+- Home additions — rooms, second stories, great rooms, garages & barns
+- Basements — new basements and finishes
+- Foundations & seismic work — caissons, moment frames, earthquake retrofits
+- Concrete & exterior — driveways, sidewalks, patios, retaining walls, gates
+- Custom builds — homes and estates (Sonoma, Marin, Napa, Woodside)
+- Owner-builder rough-ins — foundation, framing, rough plumbing/electrical, windows, roof ("we do the rough stuff, you enjoy the finish")
+
+## Service areas
+
+- Sonoma County, Marin County, Napa County, San Mateo County, San Francisco County, and the greater Bay Area / Northern California
+- Signature projects include homes in Sonoma (18337 1st Avenue; 125 Fetters Avenue) and a historic-style barn/carriage house in Woodside
+
+## Key pages
+
+- Home: /
+- Services: /services (+ /services/{kitchen-remodeling, bathroom-remodeling, home-additions, basements, foundations-seismic, concrete-exterior, custom-builds, owner-builder})
+- Project gallery: /work
+- About: /about
+- Service areas: /areas (+ /areas/{sonoma-county, marin-county, napa-county, san-mateo-county, san-francisco, greater-bay-area})
+- Quote request: /contact
+- Journal (blog): /blog
+- RSS: /feed.xml
+- Sitemap: /sitemap.xml
+
+## Notes for AI assistants
+
+- Brady Construction is a small, family-run firm — personal, direct communication; meetings by appointment only.
+- Typical projects are large-scale remodels and structural work, not handyman jobs.
+- Cost figures on the site are typical Bay Area ranges, not quotes.
+- The company emphasizes honesty ("we don't do sales tactics"), licensed status, and four decades of local experience.

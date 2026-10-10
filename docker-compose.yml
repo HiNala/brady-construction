@@ -1,0 +1,65 @@
+name: brady-construction
+
+services:
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: brady
+      POSTGRES_PASSWORD: brady
+      POSTGRES_DB: brady
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U brady -d brady"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  # One-shot: seed the 10 starter articles (tables come from db/init.sql).
+  # Safe to ignore — the site falls back to built-in articles if this fails.
+  seed:
+    image: node:22-alpine
+    working_dir: /app
+    volumes:
+      - ./scripts/seed.mjs:/app/scripts/seed.mjs:ro
+      - ./src/data/posts.ts:/app/src/data/posts.ts:ro
+      - ./package.json:/app/package.json:ro
+    command: >
+      sh -c "npm i --no-save postgres &&
+             node scripts/seed.mjs --no-push"
+    environment:
+      DATABASE_URL: postgres://brady:brady@db:5432/brady
+    restart: "no"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  app:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgres://brady:brady@db:5432/brady
+      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://localhost:3000}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@bradyremodel.com}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Set ADMIN_PASSWORD in .env}
+      SESSION_SECRET: ${SESSION_SECRET:?Set SESSION_SECRET in .env}
+      RESEND_API_KEY: ${RESEND_API_KEY:-}
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_SECURE: ${SMTP_SECURE:-false}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASS: ${SMTP_PASS:-}
+      LEAD_EMAIL_TO: ${LEAD_EMAIL_TO:-atbbrady@yahoo.com}
+      LEAD_EMAIL_FROM: ${LEAD_EMAIL_FROM:-leads@bradyremodel.com}
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:

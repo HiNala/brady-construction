@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Brady Construction Company — Website
 
-## Getting Started
+Premium 2026 rebuild of [bradyremodel.com](http://bradyremodel.com): a Next.js marketing +
+lead-generation platform for Brady Construction Company, a family-owned general contractor
+(CA License #479385) serving the Bay Area, Wine Country, and Northern California since 1980.
 
-First, run the development server:
+## Stack
+
+- **Next.js 16** (App Router, Cache Components, Partial Prerendering, `proxy.ts`)
+- **React 19** + TypeScript + Tailwind CSS 4 + Framer Motion + Lucide
+- **PostgreSQL** (Drizzle ORM + `postgres`) — leads, analytics, blog posts
+- **Auth**: HMAC session cookie (`/admin`)
+- **Email**: Resend or SMTP via nodemailer
+- **Docker**: multi-stage `Dockerfile` (standalone output) + `docker-compose.yml` (app + Postgres + seed)
+
+## Features
+
+- **Marketing site** — home, 8 service pages, project gallery (~50 real photos), about,
+  6 service-area pages, contact, legal pages
+- **Blog ("The Journal")** — 11 SEO-targeted starter articles, markdown → sanitized HTML,
+  categories, related posts, share bar, RSS feed
+- **Quote funnel** — 3-step form → `/api/lead` → Postgres + email forward (Resend/SMTP)
+- **Privacy-first analytics** — beacon endpoint, hashed IPs, visitor/session/events tables
+- **Admin** (`/admin`) — dashboard, lead inbox w/ status management, analytics, blog CRUD
+- **SEO/AEO/GEO** — per-page metadata, JSON-LD (contractor + article), OG/Twitter images,
+  sitemap, robots, RSS, `llms.txt`, canonical URLs
+
+## Quick start (local, no Docker)
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm ci
+npm run db:dev    # boots embedded Postgres on :5432, creates tables, seeds articles
+npm run dev       # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Admin: `http://localhost:3000/admin` — credentials come from `.env.local`
+(see `.env.example`; the site works without a DB — it falls back to built-in article data).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Quick start (Docker)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+cp .env.example .env   # set ADMIN_PASSWORD + SESSION_SECRET
+docker compose up --build
+```
 
-## Learn More
+`db` runs `db/init.sql` on first boot; `seed` inserts the starter articles; `app` serves on :3000.
 
-To learn more about Next.js, take a look at the following resources:
+## Database
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Schema lives in `src/lib/db/schema.ts` (tables: `leads`, `visitors`, `sessions`,
+`events`, `posts`, `email_log`). `db/init.sql` is the authoritative bootstrap DDL.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `npm run db:dev` — embedded local Postgres (Windows-friendly, no Docker/admin rights)
+- `npm run db:push` — `drizzle-kit push` (schema → connected DB)
+- `npm run db:seed` — insert starter articles (idempotent)
+- `npm run db:studio` — Drizzle Studio
 
-## Deploy on Vercel
+## Environment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+See `.env.example`. Required for production:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Var | Purpose |
+|---|---|
+| `DATABASE_URL` | Postgres connection string |
+| `NEXT_PUBLIC_SITE_URL` | Canonical origin (metadata, sitemap, RSS) |
+| `ADMIN_EMAIL` / `ADMIN_PASSWORD` | `/admin` credentials |
+| `SESSION_SECRET` | HMAC key for admin sessions |
+| `RESEND_API_KEY` **or** `SMTP_*` | Lead email forwarding (optional — leads always land in DB) |
+| `LEAD_EMAIL_TO` / `LEAD_EMAIL_FROM` | Lead notification addresses |
+
+## Checks
+
+```bash
+npm run lint        # eslint
+npm run build       # typecheck + production build
+```
+
+## Structure
+
+```
+src/app/(site)/       public pages (route group — header/footer chrome)
+src/app/admin/        owner dashboard (protected by src/proxy.ts)
+src/app/api/          lead capture, tracking beacon, admin CRUD
+src/components/       design system, forms, admin tables
+src/data/             services, areas, seed articles, gallery manifest
+src/lib/              site constants, db, auth, email, markdown, analytics
+public/images/        real project photography (hero + gallery)
+db/init.sql           idempotent bootstrap schema
+scripts/              build-images, seed, dev-db
+```
