@@ -85,9 +85,9 @@ export default function HomePage() {
           </Reveal>
           <Reveal delay={0.16}>
             <p className="mt-6 max-w-xl text-[16.5px] leading-relaxed text-bone/75">
-              {SITE.yearsInBusiness} years of Bay Area building — open-concept
-              kitchens, whole-home remodels, hillside foundations and custom
-              estates. Family-owned, engineered to last, and built for{" "}
+              {SITE.yearsInBusiness} years remodeling Bay Area homes — open-concept
+              kitchens, whole-home transformations, hillside foundations and
+              custom estates. Family-owned, engineered to last, built for{" "}
               <span className="text-bone">nice people</span>.
             </p>
           </Reveal>
@@ -252,7 +252,7 @@ export default function HomePage() {
               <Reveal><Kicker light>03 — Selected work</Kicker></Reveal>
               <Reveal delay={0.05}>
                 <Display className="mt-5 max-w-2xl text-4xl text-bone sm:text-5xl">
-                  Decades of work worth showing off
+                  Real projects. Real addresses.
                 </Display>
               </Reveal>
             </div>
@@ -440,8 +440,8 @@ export default function HomePage() {
               <Reveal delay={0.1}>
                 <p className="mt-6 text-[15.5px] leading-relaxed text-ink/65">
                   Three quick steps — project, scope, and how to reach you.
-                  Your request goes straight to Patrick, and meetings are always
-                  by appointment.
+                  Your request goes straight to Patrick — usually a personal
+                  reply within one business day.
                 </p>
               </Reveal>
               <Reveal delay={0.15}>

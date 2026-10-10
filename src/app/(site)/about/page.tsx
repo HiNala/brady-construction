@@ -39,9 +39,10 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="mt-6 max-w-2xl text-[16.5px] leading-relaxed text-bone/65">
-              We work for nice people who are ready to transform their homes
-              into their very special place. You are your environment — so
-              improve your home and life today.
+              The family business behind {SITE.yearsInBusiness} years of Bay
+              Area remodels, additions and custom builds — and we still only
+              work for nice people ready to transform their homes into their
+              very special place.
             </p>
           </Reveal>
         </Container>

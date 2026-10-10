@@ -47,9 +47,9 @@ export default function ServicesPage() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-2xl text-[16.5px] leading-relaxed text-ink/65">
-              Complete remodels, new builds and rebuilds of homes, buildings and
-              businesses. From historical to modern, contemporary to classic
-              artistic cool — {SITE.yearsInBusiness} years of Bay Area craft.
+              Complete remodels, new builds and rebuilds — from historic
+              Victorians to modern hillside estates. One licensed crew,
+              accountable start to finish, for {SITE.yearsInBusiness} years.
             </p>
           </Reveal>
         </Container>

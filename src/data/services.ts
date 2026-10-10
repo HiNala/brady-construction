@@ -112,7 +112,7 @@ export const SERVICES: Service[] = [
     slug: "basements",
     title: "Basement Construction & Conversions",
     shortTitle: "Basements",
-    tagline: "The perfect green addition — no move-out required.",
+    tagline: "Grow down, not out — most families never move.",
     description:
       "New basements, dig-downs and conversions that add a bedroom suite, gym, family room or wine cellar — while staying cool, private and quiet. The smartest square footage in the house.",
     bullets: [
