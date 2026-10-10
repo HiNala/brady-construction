@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Mail, ShieldCheck, ArrowUpRight } from "lucide-react";
+import { MapPin, Mail, ShieldCheck, Youtube } from "lucide-react";
 import { NAV, SITE } from "@/lib/site";
 import { SERVICES } from "@/data/services";
 import { AREAS } from "@/data/areas";
@@ -111,14 +111,14 @@ export function Footer() {
                 <span className="text-bone/45">{SITE.hours}</span>
               </p>
               <a
-                href={SITE.socials.linkedin}
+                href={SITE.socials.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-track="outbound_click"
                 className="flex items-center gap-2.5 hover:text-bone"
               >
-                <ArrowUpRight className="h-4 w-4 text-brass-bright" />
-                LinkedIn
+                <Youtube className="h-4 w-4 text-brass-bright" />
+                YouTube
               </a>
             </div>
           </div>

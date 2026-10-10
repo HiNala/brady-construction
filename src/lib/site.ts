@@ -23,8 +23,7 @@ export const SITE = {
     "San Francisco Bay Area, Sonoma County, Marin County, Napa County, San Mateo County, and Northern California",
   hours: "Meetings by appointment",
   socials: {
-    linkedin: "https://www.linkedin.com/company/brady-construction-company",
-    bbb: "https://www.bbb.org/us/ca/sonoma/profile/building-contractors/bradyremodelcom-1116-375509",
+    youtube: "https://www.youtube.com/@bradyconstructioncompany9371",
   },
 } as const;
 
