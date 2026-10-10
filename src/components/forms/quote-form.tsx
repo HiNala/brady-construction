@@ -64,7 +64,11 @@ export function QuoteForm({ source = "contact" }: { source?: string }) {
     formState: { errors },
   } = useForm<Values>({
     resolver: zodResolver(schema),
-    defaultValues: { preferredContact: "email", emailOptIn: false },
+    defaultValues: {
+      projectType: "", budget: "", timeline: "", city: "",
+      name: "", email: "", phone: "", preferredContact: "email",
+      message: "", emailOptIn: false, website: "",
+    },
   });
 
   const projectType = watch("projectType");
