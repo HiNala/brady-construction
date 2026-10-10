@@ -27,7 +27,7 @@ export const SEED_POSTS: SeedPost[] = [
     metaTitle: "Bay Area Kitchen Remodel Cost in 2026 — Real Numbers & Breakdown",
     metaDescription:
       "What a kitchen remodel really costs in the Bay Area in 2026: budget, mid-range and open-concept numbers, cost drivers, and how to get a straight estimate.",
-    publishedAt: "2026-09-14",
+    publishedAt: "2026-08-11",
     body: `If you're planning a kitchen remodel in the Bay Area, the honest answer to "how much?" is: it depends — but here are real numbers you can plan around.
 
 ## Bay Area kitchen remodel cost ranges (2026)
@@ -74,7 +74,7 @@ In the Bay Area, a well-executed kitchen remodel typically returns 70–110% of 
     metaTitle: "Bathroom Remodel Cost in Sonoma County, CA — 2026 Guide",
     metaDescription:
       "Bathroom remodel costs in Sonoma County explained: real budget ranges, dry rot & mold realities, permit notes for Santa Rosa, Sonoma and Healdsburg.",
-    publishedAt: "2026-09-21",
+    publishedAt: "2026-08-18",
     body: `A bathroom remodel is the second-highest-value project in most Sonoma County homes — and the one where hidden problems hide best. Here's what things actually cost, and why.
 
 ## The honest ranges (2026)
@@ -118,7 +118,7 @@ Santa Rosa, Sonoma, Healdsburg and the county all require permits for remodels t
     metaTitle: "Load-Bearing Wall Removal: Cost, Engineering & Moment Frames",
     metaDescription:
       "How load-bearing wall removal actually works — engineered moment frames, permits, timelines and costs — explained by a contractor who's opened hundreds of Bay Area homes.",
-    publishedAt: "2026-09-28",
+    publishedAt: "2026-08-25",
     body: `Everyone wants the open kitchen. Almost nobody wants to hear about the wall holding up their house. Here's the straight version of how load-bearing wall removal really works.
 
 ## First: is it actually load-bearing?
@@ -162,7 +162,7 @@ A properly engineered opening adds real value and transforms how a home lives. A
     metaTitle: "Seismic Retrofitting in the Bay Area — Contractor's Guide",
     metaDescription:
       "What a Bay Area seismic retrofit includes — foundation bolting, cripple wall bracing, soft-story fixes, costs — from a contractor doing it since 1980.",
-    publishedAt: "2026-10-05",
+    publishedAt: "2026-09-01",
     body: `The Bay Area has three near-certainties: fog, housing prices, and another big earthquake. Here's what seismic retrofitting actually involves — and what your home most likely needs.
 
 ## The four most common retrofits
@@ -203,7 +203,7 @@ Crawl space inspection first — that's where the answers live. Homes built befo
     metaTitle: "Home Addition vs. Moving in the Bay Area — 2026 Cost Math",
     metaDescription:
       "Should you build an addition or move? Real Bay Area math: addition costs per square foot, moving costs, and when each option wins.",
-    publishedAt: "2026-10-12",
+    publishedAt: "2026-09-08",
     body: `In most of the country, "we need more space" means "start browsing listings." In the Bay Area, it usually should mean "call a contractor." Here's why — with the actual math.
 
 ## The true cost of moving
@@ -254,7 +254,7 @@ The **owner-builder hybrid**: we build the foundation, frame, rough plumbing, el
     metaTitle: "Basement Additions in California — The Stealth Square Footage",
     metaDescription:
       "Adding a basement under an existing California home: feasibility, engineering, cost, and why most families never have to move out.",
-    publishedAt: "2026-10-19",
+    publishedAt: "2026-09-15",
     body: `No room on the lot. Setbacks maxed out. Views you can't touch. In the Bay Area, the biggest available addition is often *underneath* the house. We call it the perfect green addition — here's why.
 
 ## Why basements win in California
@@ -297,7 +297,7 @@ Basement additions typically run **$400–$900+ per square foot** all-in, depend
     metaTitle: "ADU vs. Home Addition in Sonoma & Napa — Which Is Smarter?",
     metaDescription:
       "ADU or attached addition? Costs, permits, rental income potential and resale value for Sonoma and Napa County properties — explained plainly.",
-    publishedAt: "2026-10-26",
+    publishedAt: "2026-09-22",
     body: `Wine Country properties have a luxury most of the Bay Area doesn't: land. That makes "should we add on?" a fork in the road — attached addition or detached ADU? Here's how to think about it.
 
 ## The quick comparison
@@ -345,7 +345,7 @@ Build the **addition** when the goal is how you live every day. Build the **ADU*
     metaTitle: "How to Choose a General Contractor — Bay Area Hiring Guide",
     metaDescription:
       "Hire a Bay Area general contractor without regret: CSLB license checks, insurance, bid red flags, and the questions that separate pros from problems.",
-    publishedAt: "2026-11-02",
+    publishedAt: "2026-09-29",
     body: `After 46 years in this trade — including decades of being the guy called in to fix other people's work — here's the honest playbook for hiring a Bay Area general contractor.
 
 ## Step 1: The license check (two minutes)
@@ -392,7 +392,7 @@ A remodel means this person is in your life for months. The best contract is sti
     metaTitle: "Hillside Building in the Bay Area — Foundation Guide",
     metaDescription:
       "What hillside construction requires in the Bay Area: caissons, retaining, drainage, engineered foundations and real costs — from a hillside specialist.",
-    publishedAt: "2026-11-09",
+    publishedAt: "2026-10-02",
     body: `Marin ridgelines, Woodside lots, Sonoma slopes, Berkeley hills — the Bay Area's best views come attached to its hardest building sites. We've done foundation work on flat lots and extreme hillsides for four decades. Here's what hillside building actually demands.
 
 ## The physics of a slope
@@ -440,7 +440,7 @@ Hillside work has no room for learning on the job: shoring fails fast, water fin
     metaTitle: "Owner-Builder Guide: Hiring a Contractor for Rough-In Work",
     metaDescription:
       "California owner-builders: how to hire a contractor for foundation, framing, rough plumbing, electrical, windows and roof — then finish it yourself.",
-    publishedAt: "2026-11-16",
+    publishedAt: "2026-10-06",
     body: `There's a smarter middle path between "hire a GC for everything" and "swing the hammer yourself": **owner-builder with a professional rough-in**. We've welcomed owner-builders, new contractors and DIY homeowners for decades — here's how it works.
 
 ## The division of labor
@@ -490,7 +490,7 @@ Clear scope, honest schedule, and a contractor who treats your project like thei
     metaTitle: "10 Open-Concept Kitchen Ideas for Bay Area Homes",
     metaDescription:
       "Open-concept kitchen ideas that work in real Bay Area homes: wall removal, islands, sightlines, lighting and the structural moves behind the magic.",
-    publishedAt: "2026-11-23",
+    publishedAt: "2026-10-09",
     body: `The "Wow transformation" is real: take the wall out, and a Bay Area ranch or craftsman suddenly lives like a new house. Here are ten moves that make open-concept kitchens actually work.
 
 ## 1. Remove the wall properly

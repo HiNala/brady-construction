@@ -7,10 +7,13 @@ export function cn(...inputs: ClassValue[]) {
 
 export function formatDate(d: Date | string): string {
   const date = typeof d === "string" ? new Date(d) : d;
+  // published_at is a calendar date stored as UTC midnight — render in UTC
+  // so "2026-09-01" doesn't display as Aug 31 in US timezones
   return date.toLocaleDateString("en-US", {
     month: "long",
     day: "numeric",
     year: "numeric",
+    timeZone: "UTC",
   });
 }
 
