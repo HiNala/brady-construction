@@ -9,7 +9,7 @@ import { getPostBySlug, getPublishedPosts } from "@/lib/posts";
 import { SEED_POSTS } from "@/data/posts";
 import { renderMarkdown } from "@/lib/markdown";
 import { SITE, absoluteUrl } from "@/lib/site";
-import { formatDate, readingTime } from "@/lib/utils";
+import { formatDate, readingTime, slugify } from "@/lib/utils";
 import { Container, Kicker, Display } from "@/components/ui";
 import { Reveal } from "@/components/reveal";
 import { ShareBar } from "@/components/share-bar";
@@ -60,6 +60,10 @@ export default async function BlogPostPage({
   const html = renderMarkdown(post.body);
   const mins = readingTime(post.body);
   const url = absoluteUrl(`/blog/${post.slug}`);
+  const toc = post.body
+    .split("\n")
+    .filter((l) => l.startsWith("## "))
+    .map((l) => ({ id: slugify(l.slice(3).trim()), text: l.slice(3).trim() }));
 
   return (
     <>
@@ -71,7 +75,13 @@ export default async function BlogPostPage({
             headline: post.title,
             description: post.excerpt,
             image: post.coverImage ? absoluteUrl(post.coverImage) : undefined,
-            author: { "@type": "Organization", name: post.author, url: SITE.url },
+            author: {
+              "@type": "Person",
+              name: post.author,
+              url: absoluteUrl("/about"),
+              worksFor: { "@id": `${SITE.url}/#business` },
+            },
+            wordCount: post.body.split(/\s+/).length,
             publisher: { "@id": `${SITE.url}/#business` },
             datePublished: post.publishedAt?.toISOString(),
             dateModified: post.updatedAt.toISOString(),
@@ -127,6 +137,24 @@ export default async function BlogPostPage({
             </Reveal>
           )}
           <div className="mx-auto mt-12 max-w-3xl">
+            {toc.length > 1 && (
+              <nav aria-label="Table of contents" className="mb-10 rounded-2xl border border-ink/10 bg-cream p-6">
+                <p className="kicker text-brass-deep">In this guide</p>
+                <ol className="mt-4 space-y-2">
+                  {toc.map((t, i) => (
+                    <li key={t.id}>
+                      <a
+                        href={`#${t.id}`}
+                        className="group flex items-baseline gap-3 text-[14.5px] font-medium text-ink/65 transition-colors hover:text-brass-deep"
+                      >
+                        <span className="text-[12px] font-bold text-brass">{String(i + 1).padStart(2, "0")}</span>
+                        {t.text}
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            )}
             <div
               className="prose-brady"
               dangerouslySetInnerHTML={{ __html: html }}

@@ -23,7 +23,7 @@ export const SEED_POSTS: SeedPost[] = [
     coverAlt: "Bright remodeled Bay Area kitchen with island and pendant lighting",
     category: "Cost Guides",
     tags: ["kitchen remodeling", "costs", "bay area"],
-    keywords: ["kitchen remodel cost bay area", "kitchen renovation cost", "bay area kitchen remodel"],
+    keywords: ["kitchen remodel cost bay area", "kitchen renovation cost", "bay area kitchen remodel", "kitchen remodel cost per square foot", "open concept kitchen cost", "kitchen renovation contractor"],
     metaTitle: "Bay Area Kitchen Remodel Cost in 2026 — Real Numbers & Breakdown",
     metaDescription:
       "What a kitchen remodel really costs in the Bay Area in 2026: budget, mid-range and open-concept numbers, cost drivers, and how to get a straight estimate.",
@@ -42,7 +42,7 @@ Bay Area pricing runs 20–40% above national averages for three reasons: labor 
 
 ## The hidden cost drivers
 
-**Structure.** Removing a wall between kitchen and living room is the single most requested change we see — and the one most underestimated. A load-bearing wall needs an engineered steel moment frame, calculations, a permit, and inspection. Done right, it's worth every dollar; done cheap, it's a liability.
+**Structure.** Removing a wall between kitchen and living room is the single most requested change we see — and the one most underestimated. A load-bearing wall needs an [engineered steel moment frame](/services/kitchen-remodeling), calculations, a permit, and inspection. Done right, it's worth every dollar; done cheap, it's a liability.
 
 **Old-house surprises.** Dry rot, mold, galvanized plumbing, knob-and-tube wiring, unlevel floors. A contractor who's opened Bay Area walls for decades budgets for these honestly instead of discovering them mid-job.
 
@@ -70,7 +70,7 @@ In the Bay Area, a well-executed kitchen remodel typically returns 70–110% of 
     coverAlt: "Remodeled Sonoma County bathroom with double vanity and brass sconces",
     category: "Cost Guides",
     tags: ["bathroom remodeling", "costs", "sonoma county"],
-    keywords: ["bathroom remodel cost sonoma", "bathroom renovation cost", "sonoma county contractor"],
+    keywords: ["bathroom remodel cost sonoma", "bathroom renovation cost", "sonoma county contractor", "bathroom remodel cost california", "walk-in shower remodel", "bathroom contractor santa rosa"],
     metaTitle: "Bathroom Remodel Cost in Sonoma County, CA — 2026 Guide",
     metaDescription:
       "Bathroom remodel costs in Sonoma County explained: real budget ranges, dry rot & mold realities, permit notes for Santa Rosa, Sonoma and Healdsburg.",
@@ -101,7 +101,7 @@ In the Bay Area, a well-executed kitchen remodel typically returns 70–110% of 
 
 ## Permits in Sonoma County
 
-Santa Rosa, Sonoma, Healdsburg and the county all require permits for remodels touching plumbing or electrical. Expect $800–$3,000 and 2–6 weeks of review. A licensed contractor handles the whole process — ask any bidder how they handle permits; the answer tells you a lot.
+Santa Rosa, Sonoma, Healdsburg and [the county](/areas/sonoma-county) all require permits for remodels touching plumbing or electrical. Expect $800–$3,000 and 2–6 weeks of review. A licensed contractor handles the whole process — ask any bidder how they handle permits; the answer tells you a lot.
 
 *Have a bathroom in mind? [Send us your project](/contact) — photos and a rough budget are all we need to start.*`,
   },
@@ -114,7 +114,7 @@ Santa Rosa, Sonoma, Healdsburg and the county all require permits for remodels t
     coverAlt: "Engineered steel moment frame installed during load-bearing wall removal",
     category: "Structural & Foundations",
     tags: ["open concept", "structural", "kitchen remodeling"],
-    keywords: ["load bearing wall removal", "open concept floor plan", "moment frame", "wall removal contractor"],
+    keywords: ["load bearing wall removal", "open concept floor plan", "moment frame", "wall removal contractor", "how to remove a wall in a house", "steel beam installation cost", "simpson strong-tie moment frame"],
     metaTitle: "Load-Bearing Wall Removal: Cost, Engineering & Moment Frames",
     metaDescription:
       "How load-bearing wall removal actually works — engineered moment frames, permits, timelines and costs — explained by a contractor who's opened hundreds of Bay Area homes.",
@@ -129,7 +129,7 @@ Not every wall carries load — and not every load-bearing wall is obvious. Clue
 
 1. **Engineering.** An engineer calculates loads and specifies the beam — these days often a **moment frame**: a steel frame that carries load while staying open, so you get a clear span instead of a dropped beam and posts.
 2. **Temporary support.** The structure is shored before anything is cut.
-3. **The frame goes in.** We install engineered systems like Simpson Strong-Tie moment frames, or fully welded steel frames for bigger spans — bolted, anchored, inspected.
+3. **The frame goes in.** We install engineered systems like Simpson Strong-Tie moment frames, or fully welded steel frames for bigger spans — bolted, anchored, inspected. It's the core of our [open-concept kitchen work](/services/kitchen-remodeling).
 4. **The wall comes out.** Only after the new structure carries the load.
 5. **Inspection & finish.** Permitted, signed off, then made invisible.
 
@@ -158,7 +158,7 @@ A properly engineered opening adds real value and transforms how a home lives. A
     coverAlt: "Foundation work in progress on a Bay Area hillside home",
     category: "Structural & Foundations",
     tags: ["seismic retrofit", "foundation", "safety"],
-    keywords: ["seismic retrofit contractor", "foundation bolting", "earthquake retrofit bay area", "cripple wall bracing"],
+    keywords: ["seismic retrofit contractor", "foundation bolting", "earthquake retrofit bay area", "cripple wall bracing", "soft story retrofit", "house bolting cost", "earthquake strengthening"],
     metaTitle: "Seismic Retrofitting in the Bay Area — Contractor's Guide",
     metaDescription:
       "What a Bay Area seismic retrofit includes — foundation bolting, cripple wall bracing, soft-story fixes, costs — from a contractor doing it since 1980.",
@@ -167,7 +167,7 @@ A properly engineered opening adds real value and transforms how a home lives. A
 
 ## The four most common retrofits
 
-**Foundation bolting.** Older homes often just *sit* on their foundations. Bolting anchors the mudsill to the concrete so the house can't slide off. This is the highest-value retrofit dollar most Bay Area homes can spend.
+**[Foundation bolting](/services/foundations-seismic).** Older homes often just *sit* on their foundations. Bolting anchors the mudsill to the concrete so the house can't slide off. This is the highest-value retrofit dollar most Bay Area homes can spend.
 
 **Cripple wall bracing.** That short stud wall between foundation and floor — the crawl space perimeter — is the classic collapse point. Plywood shear panels turn it into a braced wall.
 
@@ -199,7 +199,7 @@ Crawl space inspection first — that's where the answers live. Homes built befo
     coverAlt: "Home addition under construction showing new framing",
     category: "Planning",
     tags: ["additions", "planning", "costs"],
-    keywords: ["home addition cost", "addition vs moving", "home addition contractor bay area", "room addition cost"],
+    keywords: ["home addition cost", "addition vs moving", "home addition contractor bay area", "room addition cost", "should i add on or move", "second story addition cost", "addition cost per square foot"],
     metaTitle: "Home Addition vs. Moving in the Bay Area — 2026 Cost Math",
     metaDescription:
       "Should you build an addition or move? Real Bay Area math: addition costs per square foot, moving costs, and when each option wins.",
@@ -209,7 +209,7 @@ Crawl space inspection first — that's where the answers live. Homes built befo
 ## The true cost of moving
 
 - **Transaction costs:** ~5–6% agent commissions plus transfer tax and closing costs. On a $1.8M Bay Area home, that's roughly $100,000–$130,000 gone — before you've bought a single square foot.
-- **The price gap:** moving to a house with the extra bedroom or the open kitchen usually costs far more than building it.
+- **The price gap:** moving to a house with the extra bedroom or the open kitchen usually costs far more than [building it](/services/home-additions).
 - **The rate hit:** trading a 3% mortgage for a current-rate one can add thousands per month for decades.
 
 ## The true cost of adding on
@@ -250,7 +250,7 @@ The **owner-builder hybrid**: we build the foundation, frame, rough plumbing, el
     coverAlt: "Basement addition under construction with supports and concrete",
     category: "Remodeling Guides",
     tags: ["basements", "additions", "wine cellar"],
-    keywords: ["basement addition", "basement dig out", "basement contractor california", "wine cellar construction"],
+    keywords: ["basement addition", "basement dig out", "basement contractor california", "wine cellar construction", "basement conversion cost", "add square footage without addition", "basement under existing house"],
     metaTitle: "Basement Additions in California — The Stealth Square Footage",
     metaDescription:
       "Adding a basement under an existing California home: feasibility, engineering, cost, and why most families never have to move out.",
@@ -262,7 +262,7 @@ The **owner-builder hybrid**: we build the foundation, frame, rough plumbing, el
 - **No move-out.** The work happens below and around you — most families live at home through the entire project.
 - **Cool and private.** Below grade means naturally temperature-stable — ideal for a wine cellar, gym, media room, or guest suite that never overheats.
 - **Invisible to the street.** No changed roofline, no lost yard, no neighbor drama over second stories.
-- **It fixes the foundation along the way.** A new basement *is* a new engineered foundation — the seismic upgrade comes built in.
+- **It fixes the foundation along the way.** A new basement *is* a new [engineered foundation](/services/foundations-seismic) — the seismic upgrade comes built in.
 
 ## What a basement addition actually involves
 
@@ -293,12 +293,12 @@ Basement additions typically run **$400–$900+ per square foot** all-in, depend
     coverAlt: "Two-story home with attached garage beneath mature oak trees",
     category: "Planning",
     tags: ["adu", "additions", "wine country"],
-    keywords: ["adu vs addition", "adu builder sonoma county", "guest house cost", "adu cost napa"],
+    keywords: ["adu vs addition", "adu builder sonoma county", "guest house cost", "adu cost napa", "accessory dwelling unit sonoma", "detached adu cost", "backyard cottage bay area"],
     metaTitle: "ADU vs. Home Addition in Sonoma & Napa — Which Is Smarter?",
     metaDescription:
       "ADU or attached addition? Costs, permits, rental income potential and resale value for Sonoma and Napa County properties — explained plainly.",
     publishedAt: "2026-09-22",
-    body: `Wine Country properties have a luxury most of the Bay Area doesn't: land. That makes "should we add on?" a fork in the road — attached addition or detached ADU? Here's how to think about it.
+    body: `Wine Country properties have a luxury most of the Bay Area doesn't: land. That makes "should we add on?" a fork in the road — [attached addition](/services/home-additions) or [detached ADU](/services/custom-builds)? Here's how to think about it.
 
 ## The quick comparison
 
@@ -341,7 +341,7 @@ Build the **addition** when the goal is how you live every day. Build the **ADU*
     coverAlt: "Contractor standing at a front door holding rolled plans",
     category: "Planning",
     tags: ["hiring", "contractors", "planning"],
-    keywords: ["how to choose a general contractor", "licensed contractor california", "contractor red flags", "check contractor license"],
+    keywords: ["how to choose a general contractor", "licensed contractor california", "contractor red flags", "check contractor license", "contractor interview questions", "cslb license lookup", "hiring a remodeler"],
     metaTitle: "How to Choose a General Contractor — Bay Area Hiring Guide",
     metaDescription:
       "Hire a Bay Area general contractor without regret: CSLB license checks, insurance, bid red flags, and the questions that separate pros from problems.",
@@ -350,7 +350,7 @@ Build the **addition** when the goal is how you live every day. Build the **ADU*
 
 ## Step 1: The license check (two minutes)
 
-Every legitimate California contractor has a CSLB license number. Go to **cslb.ca.gov**, search the number, and confirm three things: **active status**, **classification B** (general building) for remodels, and **workers' comp insurance** if they have employees. Ours is #479385 — check it; every real contractor wants you to.
+Every legitimate California contractor has a CSLB license number. Go to [cslb.ca.gov](https://www.cslb.ca.gov), search the number, and confirm three things: **active status**, **classification B** (general building) for remodels, and **workers' comp insurance** if they have employees. [Ours is #479385](/about) — check it; every real contractor wants you to.
 
 ## Step 2: Read the bid like a pro
 
@@ -388,7 +388,7 @@ A remodel means this person is in your life for months. The best contract is sti
     coverAlt: "Engineered foundation work on a steep Bay Area hillside site",
     category: "Structural & Foundations",
     tags: ["hillside", "foundations", "engineering"],
-    keywords: ["hillside construction bay area", "caisson foundation", "hillside foundation contractor", "retaining wall"],
+    keywords: ["hillside construction bay area", "caisson foundation", "hillside foundation contractor", "retaining wall", "hillside home foundation", "pier and grade beam", "slope construction"],
     metaTitle: "Hillside Building in the Bay Area — Foundation Guide",
     metaDescription:
       "What hillside construction requires in the Bay Area: caissons, retaining, drainage, engineered foundations and real costs — from a hillside specialist.",
@@ -405,7 +405,7 @@ A flat lot holds a house. A hillside lot has to be *negotiated with*. Three forc
 
 ## The foundation toolbox
 
-**Caissons / drilled piers.** Deep concrete columns drilled to competent soil or bedrock, connected by grade beams. This is how you put a house on a slope that laughs at conventional footings.
+**[Caissons / drilled piers](/services/foundations-seismic).** Deep concrete columns drilled to competent soil or bedrock, connected by grade beams. This is how you put a house on a slope that laughs at conventional footings.
 
 **Retaining structures.** Engineered walls that hold the slope — with drainage behind them, always. A retaining wall without drainage is a dam with a deadline.
 
@@ -436,12 +436,12 @@ Hillside work has no room for learning on the job: shoring fails fast, water fin
     coverAlt: "Framed addition with open studs — owner-builder rough-in complete",
     category: "Remodeling Guides",
     tags: ["owner builder", "diy", "rough in"],
-    keywords: ["owner builder contractor", "rough in services", "shell construction", "owner builder california"],
+    keywords: ["owner builder contractor", "rough in services", "shell construction", "owner builder california", "dry shell contractor", "rough carpentry contractor", "owner builder help"],
     metaTitle: "Owner-Builder Guide: Hiring a Contractor for Rough-In Work",
     metaDescription:
       "California owner-builders: how to hire a contractor for foundation, framing, rough plumbing, electrical, windows and roof — then finish it yourself.",
     publishedAt: "2026-10-06",
-    body: `There's a smarter middle path between "hire a GC for everything" and "swing the hammer yourself": **owner-builder with a professional rough-in**. We've welcomed owner-builders, new contractors and DIY homeowners for decades — here's how it works.
+    body: `There's a smarter middle path between "hire a GC for everything" and "swing the hammer yourself": **[owner-builder with a professional rough-in](/services/owner-builder)**. We've welcomed owner-builders, new contractors and DIY homeowners for decades — here's how it works.
 
 ## The division of labor
 
@@ -486,7 +486,7 @@ Clear scope, honest schedule, and a contractor who treats your project like thei
     coverAlt: "Open-concept kitchen with island flowing into living space",
     category: "Remodeling Guides",
     tags: ["kitchen", "open concept", "design"],
-    keywords: ["open concept kitchen ideas", "kitchen island ideas", "great room remodel", "kitchen wall removal"],
+    keywords: ["open concept kitchen ideas", "kitchen island ideas", "great room remodel", "kitchen wall removal", "open floor plan kitchen", "kitchen island design", "modern farmhouse kitchen bay area"],
     metaTitle: "10 Open-Concept Kitchen Ideas for Bay Area Homes",
     metaDescription:
       "Open-concept kitchen ideas that work in real Bay Area homes: wall removal, islands, sightlines, lighting and the structural moves behind the magic.",
@@ -495,7 +495,7 @@ Clear scope, honest schedule, and a contractor who treats your project like thei
 
 ## 1. Remove the wall properly
 
-The biggest single transformation. A load-bearing wall comes out with an engineered moment frame or beam — invisible structure, visible magic. Flush beams keep the ceiling plane clean.
+The biggest single transformation. A load-bearing wall comes out with an [engineered moment frame](/services/kitchen-remodeling) or beam — invisible structure, visible magic. Flush beams keep the ceiling plane clean.
 
 ## 2. Let the island anchor everything
 

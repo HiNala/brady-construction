@@ -20,7 +20,7 @@ function seedToPost(s: SeedPost, i: number): Post {
     keywords: s.keywords,
     metaTitle: s.metaTitle,
     metaDescription: s.metaDescription,
-    author: "Brady Construction",
+    author: "Patrick Brady",
     status: "published",
     publishedAt: new Date(s.publishedAt),
     createdAt: now,
