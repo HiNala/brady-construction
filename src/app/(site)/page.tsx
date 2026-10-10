@@ -172,7 +172,7 @@ export default function HomePage() {
               <div className="absolute -bottom-6 -left-4 rounded-xl bg-ink px-6 py-5 text-bone shadow-[var(--shadow-lift)] sm:-left-8">
                 <p className="display text-4xl font-medium text-brass-bright">{SITE.yearsInBusiness}+</p>
                 <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-bone/60">
-                  Years building<br />in the Bay Area
+                  Years building <br />in the Bay Area
                 </p>
               </div>
             </Reveal>
@@ -433,7 +433,7 @@ export default function HomePage() {
               <Reveal><Kicker>07 — Get started</Kicker></Reveal>
               <Reveal delay={0.05}>
                 <Display className="mt-5 text-4xl sm:text-5xl">
-                  Know your budget?<br />Know your wishes?<br />
+                  Know your budget? <br />Know your wishes? <br />
                   <em className="italic text-brass-deep">Let&apos;s go.</em>
                 </Display>
               </Reveal>

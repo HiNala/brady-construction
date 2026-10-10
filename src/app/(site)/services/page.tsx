@@ -42,7 +42,7 @@ export default function ServicesPage() {
           <Reveal><Kicker>What we do</Kicker></Reveal>
           <Reveal delay={0.05}>
             <Display as="h1" className="mt-5 max-w-3xl text-5xl sm:text-6xl">
-              An array of jobs,<br />one seasoned hand
+              An array of jobs, <br />one seasoned hand
             </Display>
           </Reveal>
           <Reveal delay={0.1}>

@@ -103,7 +103,7 @@ export default function BlogPage() {
           <Reveal><Kicker light>The Journal</Kicker></Reveal>
           <Reveal delay={0.06}>
             <Display as="h1" className="mt-5 max-w-3xl text-5xl text-bone sm:text-6xl">
-              Remodeling wisdom,<br />honestly told
+              Remodeling wisdom, <br />honestly told
             </Display>
           </Reveal>
           <Reveal delay={0.12}>

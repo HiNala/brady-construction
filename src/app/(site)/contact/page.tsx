@@ -43,7 +43,7 @@ export default function ContactPage() {
           <Reveal><Kicker light>Quotes &amp; consultations</Kicker></Reveal>
           <Reveal delay={0.06}>
             <Display as="h1" className="mt-5 max-w-3xl text-5xl text-bone sm:text-6xl">
-              Let&apos;s talk about<br />your project
+              Let&apos;s talk about <br />your project
             </Display>
           </Reveal>
           <Reveal delay={0.12}>

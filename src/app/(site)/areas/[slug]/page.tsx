@@ -64,7 +64,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           </Reveal>
           <Reveal delay={0.06}>
             <Display as="h1" className="mt-5 max-w-3xl text-5xl text-bone sm:text-6xl">
-              Building in<br />{area.name}
+              Building in <br />{area.name}
             </Display>
           </Reveal>
           <Reveal delay={0.12}>

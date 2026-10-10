@@ -1,7 +1,12 @@
 "use client";
 
+import { useSyncExternalStore } from "react";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
+
+const emptySubscribe = () => () => {};
+const getTrue = () => true;
+const getFalse = () => false;
 
 const variants: Variants = {
   hidden: { opacity: 0, y: 28 },
@@ -24,7 +29,12 @@ export function Reveal({
   once?: boolean;
 }) {
   const reduced = useReducedMotion();
-  if (reduced) return <div className={cn(className)}>{children}</div>;
+  // SSR has no media query — always render the motion tree during hydration
+  // (getServerSnapshot → false), then swap to a plain div once hydrated
+  // when reduced motion is on. useSyncExternalStore avoids a hydration
+  // mismatch AND the setState-in-effect anti-pattern.
+  const mounted = useSyncExternalStore(emptySubscribe, getTrue, getFalse);
+  if (mounted && reduced) return <div className={cn(className)}>{children}</div>;
   return (
     <motion.div
       className={cn(className)}
