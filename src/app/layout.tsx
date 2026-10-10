@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { JsonLd } from "@/components/json-ld";
-import { SITE } from "@/lib/site";
+import { SITE, absoluteUrl } from "@/lib/site";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -34,7 +34,19 @@ export const metadata: Metadata = {
     "seismic retrofit",
     "custom home builder Northern California",
   ],
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    types: { "application/rss+xml": absoluteUrl("/feed.xml") },
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+    other: Object.fromEntries(
+      [
+        ["msvalidate.01", process.env.NEXT_PUBLIC_BING_VERIFICATION],
+        ["yandex-verification", process.env.NEXT_PUBLIC_YANDEX_VERIFICATION],
+      ].filter((e): e is [string, string] => Boolean(e[1]))
+    ),
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -111,6 +123,9 @@ const businessJsonLd = {
     "basement construction",
     "concrete work",
   ],
+  logo: absoluteUrl("/icon.svg"),
+  image: absoluteUrl("/images/hero/kitchen-048.webp"),
+  sameAs: [SITE.socials.youtube],
 };
 
 export default function RootLayout({

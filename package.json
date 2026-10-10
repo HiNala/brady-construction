@@ -11,7 +11,8 @@
     "db:studio": "drizzle-kit studio",
     "db:seed": "node scripts/seed.mjs",
     "db:setup": "npx drizzle-kit push --force && node scripts/seed.mjs",
-    "db:dev": "node scripts/dev-db.mjs"
+    "db:dev": "node scripts/dev-db.mjs",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",
