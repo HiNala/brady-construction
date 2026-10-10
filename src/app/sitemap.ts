@@ -4,15 +4,22 @@ import { SERVICES } from "@/data/services";
 import { AREAS } from "@/data/areas";
 import { SEED_POSTS } from "@/data/posts";
 import { getPublishedPosts } from "@/lib/posts";
+import { GALLERY, HEROES } from "@/lib/gallery";
 import { absoluteUrl } from "@/lib/site";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Reads DB posts — request-time under Cache Components
   await connection();
+
+  const img = (p: string) => absoluteUrl(p);
+  const galleryImages = GALLERY.slice(0, 40).map((g) => img(g.src));
+
   const staticPages: MetadataRoute.Sitemap = [
-    { url: absoluteUrl("/"), priority: 1, changeFrequency: "weekly" },
+    { url: absoluteUrl("/"), priority: 1, changeFrequency: "weekly",
+      images: HEROES.slice(0, 6).map((h) => img(h.src)) },
     { url: absoluteUrl("/services"), priority: 0.9, changeFrequency: "monthly" },
-    { url: absoluteUrl("/work"), priority: 0.9, changeFrequency: "monthly" },
+    { url: absoluteUrl("/work"), priority: 0.9, changeFrequency: "monthly",
+      images: galleryImages },
     { url: absoluteUrl("/about"), priority: 0.7, changeFrequency: "yearly" },
     { url: absoluteUrl("/contact"), priority: 0.95, changeFrequency: "yearly" },
     { url: absoluteUrl("/areas"), priority: 0.8, changeFrequency: "monthly" },
@@ -26,6 +33,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: absoluteUrl(`/services/${s.slug}`),
     priority: 0.85,
     changeFrequency: "monthly" as const,
+    images: [img(s.image)],
   }));
 
   const areaPages = AREAS.map((a) => ({
@@ -42,12 +50,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: p.updatedAt,
       priority: 0.7,
       changeFrequency: "monthly" as const,
+      images: p.coverImage ? [img(p.coverImage)] : [],
     }));
   } catch {
     postPages = SEED_POSTS.map((p) => ({
       url: absoluteUrl(`/blog/${p.slug}`),
       priority: 0.7,
       changeFrequency: "monthly" as const,
+      images: p.coverImage ? [img(p.coverImage)] : [],
     }));
   }
 

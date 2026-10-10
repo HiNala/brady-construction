@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <div className="grain flex min-h-[80svh] items-center bg-ink text-bone">
+    <div className="grain flex min-h-[100svh] items-center bg-ink text-bone">
       <div className="mx-auto max-w-2xl px-6 text-center">
         <p className="kicker text-brass-bright">404 — Lost on the jobsite</p>
         <h1 className="display mt-5 text-6xl font-medium sm:text-7xl">
