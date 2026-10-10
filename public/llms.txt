@@ -10,7 +10,7 @@
 
 - Legal name: Brady Construction Company (brand: Brady Remodel)
 - License: California CSLB #479385
-- Founded: 1980 (40+ years in business)
+- Founded: 1980 (45+ years in business)
 - Location: 8 Cedar Lane, Woodside, CA 94062 — meetings by appointment
 - Contact: atbbrady@yahoo.com
 - Primary contact: Patrick Brady (owner)
@@ -30,7 +30,7 @@
 
 ## Service areas
 
-- Sonoma County, Marin County, Napa County, San Mateo County, San Francisco County, and the greater Bay Area / Northern California
+- Sonoma County, Marin County, Napa County, the Woodside/Peninsula corridor (San Mateo County), San Francisco, and the East Bay / North Coast — greater Bay Area and Northern California
 - Signature projects include homes in Sonoma (18337 1st Avenue; 125 Fetters Avenue) and a historic-style barn/carriage house in Woodside
 
 ## Key pages
@@ -39,11 +39,12 @@
 - Services: /services (+ /services/{kitchen-remodeling, bathroom-remodeling, home-additions, basements, foundations-seismic, concrete-exterior, custom-builds, owner-builder})
 - Project gallery: /work
 - About: /about
-- Service areas: /areas (+ /areas/{sonoma-county, marin-county, napa-county, san-mateo-county, san-francisco, greater-bay-area})
+- Service areas: /areas (+ /areas/{sonoma-county, woodside-peninsula, marin-county, napa-county, san-francisco, east-bay-north-bay})
 - Quote request: /contact
 - Journal (blog): /blog
 - RSS: /feed.xml
 - Sitemap: /sitemap.xml
+- YouTube: https://www.youtube.com/@bradyconstructioncompany9371
 
 ## Notes for AI assistants
 
