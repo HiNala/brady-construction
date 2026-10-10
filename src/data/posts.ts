@@ -535,4 +535,108 @@ Open kitchens show everything. Deep drawers, a scullery corner or a hardworking 
 
 *Want your own Wow transformation? [Show us the wall](/contact) — we'll show you the open plan inside it.*`,
   },
+  {
+    slug: "how-long-does-kitchen-remodel-take",
+    title: "How Long Does a Kitchen Remodel Take? A Real Bay Area Timeline",
+    excerpt:
+      "From first drawings to final walkthrough — the honest phase-by-phase timeline for a Bay Area kitchen remodel, and the five delays that blow schedules up.",
+    coverImage: "/images/gallery/structural-030.webp",
+    coverAlt: "Home under remodel with exposed framing lumber and ceiling joists",
+    category: "Remodeling Guides",
+    tags: ["kitchen remodeling", "timeline", "planning"],
+    keywords: [
+      "how long does a kitchen remodel take", "kitchen remodel timeline",
+      "kitchen renovation schedule", "how long to remodel a kitchen",
+      "kitchen remodel phases", "bay area remodel timeline",
+    ],
+    metaTitle: "How Long Does a Kitchen Remodel Take? Real Bay Area Timeline",
+    metaDescription:
+      "Phase-by-phase Bay Area kitchen remodel timeline: design, permits, demo, rough-in, finish. What actually takes the time — and the five delays to plan around.",
+    publishedAt: "2026-10-09",
+    body: `The honest answer is 8–14 weeks of construction for a full Bay Area kitchen remodel — but that's the middle chapter of a longer story. Here's the whole timeline, phase by phase, from the first conversation to the last cabinet pull.
+
+## The full timeline at a glance
+
+| Phase | Typical duration | What happens |
+|-------|------------------|--------------|
+| Design & estimate | 2–6 weeks | Site walk, measurements, scope, pricing |
+| Permits & engineering | 2–8 weeks | Drawings, structural calcs, plan review |
+| Ordering & lead times | 2–10 weeks (overlaps) | Cabinets, appliances, counters, fixtures |
+| Demolition | 1–2 weeks | Old kitchen out, surprises assessed |
+| Rough construction | 3–6 weeks | Framing, moment frame, plumbing, electrical |
+| Finish work | 4–8 weeks | Drywall, cabinets, counters, tile, paint, fixtures |
+| Walkthrough & punch | ~1 week | Final details done right |
+
+Notice the math: the *construction* is often shorter than the *preparation*. Permits and cabinets set the real schedule.
+
+## Structural changes add time — and are worth it
+
+A [load-bearing wall coming out](/services/kitchen-remodeling) adds engineering, permit review and a proper moment frame install — typically 2–4 extra weeks — and is usually the single best decision in the project.
+
+## The five schedule-killers
+
+1. **Permit review.** Bay Area cities vary wildly — a Woodside hillside review behaves differently than a Santa Rosa standard permit. Assume 3–8 weeks.
+2. **Custom cabinets.** 8–12 weeks from sign-off to install is normal. Order early.
+3. **Old-house surprises.** Dry rot, unlevel floors, knob-and-tube wiring — an honest contractor prices and schedules for these up front.
+4. **Change orders mid-build.** Moving a wall on paper is cheap; moving it after framing is not. Lock the plan.
+5. **Fixture backorders.** The imported faucet or the range you want — order at design, not at demo.
+
+## Can you stay in the house?
+
+Usually yes — a well-run remodel sets up a temporary kitchen, seals the dust zone and keeps the site clean. Families in every county around the Bay have cooked breakfast 20 feet from our saws.
+
+*Want a real timeline on your kitchen? [Tell us the scope](/contact) — we'll tell you honestly how long it takes. For the cost side, read our [Bay Area kitchen remodel cost guide](/blog/bay-area-kitchen-remodel-cost-2026).*`,
+  },
+  {
+    slug: "cost-to-build-a-house-bay-area",
+    title: "How Much Does It Cost to Build a House in the Bay Area? (2026)",
+    excerpt:
+      "New home construction in the Bay Area runs $400–$800+ per square foot — here's what drives the number, what site work really costs, and how the money breaks down.",
+    coverImage: "/images/gallery/exterior-054.webp",
+    coverAlt: "Custom home under construction with steel moment frame and unfinished facade",
+    category: "Cost Guides",
+    tags: ["custom homes", "costs", "new construction"],
+    keywords: [
+      "cost to build a house bay area", "new home construction cost",
+      "cost per square foot to build", "custom home builder bay area",
+      "build a house in california", "bay area home building cost",
+    ],
+    metaTitle: "Cost to Build a House in the Bay Area (2026) — $/Sq Ft Guide",
+    metaDescription:
+      "What it really costs to build a house in the Bay Area: per-square-foot ranges, site and hillside premiums, permit costs, and where the money actually goes.",
+    publishedAt: "2026-10-10",
+    body: `Everyone asks for the per-square-foot number — so here it is: **$400–$800+ per square foot** for custom home construction in the Bay Area, before land. Where your project lands in that range depends on the site, the structure and the finishes.
+
+## The honest ranges
+
+| Build type | Typical $/sq ft | Notes |
+|------------|-----------------|-------|
+| Simple, efficient plan | $400–$550 | Flat site, straightforward structure, good-not-custom finishes |
+| Custom family home | $550–$700 | Real architecture, engineered structure, quality finishes |
+| High-end / hillside / complex | $700–$900+ | Steel moment frames, retaining, premium everything |
+
+For a 2,400 sq ft custom home, that puts construction roughly between **$1M and $1.9M** — a range so wide it's meaningless without the site details.
+
+## What actually drives the number
+
+**The site.** Flat, served lots are the baseline. [Hillside building](/services/foundations-seismic) adds caissons, retaining structures and drainage engineering — the single biggest cost multiplier. We've spent 46 years building on slopes most contractors won't bid.
+
+**The structure.** Wide-open great rooms need steel. Clear spans, big glass walls and cantilevers need engineered frames — the same moment-frame work we do in [open-concept remodels](/blog/load-bearing-wall-removal-guide), scaled to a whole house.
+
+**The finishes.** Builder-grade to estate-grade is a 2x swing. Cabinet packages, stone, glazing and fixtures are where budgets quietly double.
+
+**The permits & soft costs.** Budget 8–15% for architecture, engineering, soils reports, permits and utility connections — before a shovel hits dirt.
+
+## Where people underestimate
+
+- **Site work:** excavation, retaining, drainage, utility trenching
+- **Soft costs:** plans, permits, surveys, school/impact fees by city
+- **The last 5%:** landscaping, driveways, fencing — rarely in the headline number
+
+## The smarter question
+
+Not "what does it cost" but "what does *this site* cost" — bring us the parcel or the plans and we'll tell you honestly where it lands.
+
+*Have a lot, a plan, or just an idea? [Tell us about it](/contact) — we build [custom homes and estates](/services/custom-builds) across the Bay Area and Wine Country.*`,
+  },
 ];
